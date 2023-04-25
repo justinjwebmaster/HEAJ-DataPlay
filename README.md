@@ -11,8 +11,10 @@
 ### Initialisation 
     git init
 
+### Pour créer sa branch
+    git branch mon_prenom
 
-### Pour aller sur sa *branch* 
+### Pour aller sur sa branch
     git checkout ma_branch
 
 > Florence = git checkout florence
@@ -28,13 +30,17 @@
 
 ### Pour créer une nouvelle branch
     git branch nom_de_la_branch
+
 pour aller sur cette nouvelle branch
+
     git checkout nom_de_la_branch
 
 
 ### Pour ajouter des nouveaux fichiers à git 
     git add -A
+
 ou 
+
     git add nom_du_fichier.ext
 
 
@@ -42,6 +48,7 @@ ou
     git status
 
 et pour voir les modifications dans les fichiers
+
     git diff
 
 
@@ -51,6 +58,7 @@ et pour voir les modifications dans les fichiers
 
 ### Pour push sur github
 premier push pour une nouvelle branch
+
     git push -u origin nom_de_ma_branch
 
 les "push" suivants
