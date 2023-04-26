@@ -4,4 +4,4 @@
 
 ## Démarrer le webserver:
 
-- `npx start`
+- `npm start`
