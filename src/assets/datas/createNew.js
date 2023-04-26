@@ -17,6 +17,7 @@ fetch('/assets/datas/dataset.json')
         "id": element.id,
         "objet": element.Objet,
         "url": element.url,
+        "total": element.tot,
         "position": {
           "p1": element.p1,
           "p2": element.p2,
@@ -43,14 +44,17 @@ fetch('/assets/datas/dataset.json')
           "p23": element.p23,
           "p24": element.p24
         }
-      };;
+      };
 
       newDatas.push(newObject);
 
     });
 
-    console.log(newDatas);
+    var divJson = document.querySelector('.json');
+    divJson.innerHTML = JSON.stringify(newDatas);
 
+
+    console.log(newDatas);
 
   })
   .catch((error) => {
