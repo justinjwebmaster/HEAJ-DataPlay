@@ -6,13 +6,13 @@ The Uninvited est un projet dans le cadre de l'atelier Dataplay; le but étant d
 
 Le sujet de ce groupe traite des objets étrangers dans le corps humain; fun facts incluses
 
-##Documentation & 
+## Conseils pour l'équipe
 
-> Travailler sur sa *branch* dans un pemier temps
->
-> Ne pas modifier une autre *branch*
+Travailler sur sa *branch* dans un pemier temps
 
-> La branch MAIN sera la version finale de notre site, seulement y ajouter nos bouts de code quand on est 100 % certains que ceux-ci sont correct.
+Ne pas modifier une autre *branch*
+
+La branch MAIN sera la version finale de notre site, seulement y ajouter nos bouts de code quand on est à 100% certains que ceux-ci sont correct.
 
 ## Documentation
 
@@ -68,14 +68,14 @@ et pour voir les modifications dans les fichiers
 #### Pour push sur github
 premier push pour une nouvelle branch
 
-    `git push -u origin `nom_de_ma_branch
+    `git push -u origin nom_de_ma_branch`
 
 les "push" suivants
-  git push
+  `git push`
 
 
 #### Pour cloner un repo sur mon ordi
-    git clone url_github monDossier
+    `git clone url_github monDossier`
 
 
 
