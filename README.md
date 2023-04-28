@@ -1,4 +1,12 @@
-# Dataplay - HEAJ 202223 
+# Dataplay - HEAJ 202223 - Dataplaylist
+
+## The Uninvited
+
+The Uninvited est un projet dans le cadre de l'atelier Dataplay; le but étant de réaliser un site interactif comprennant des datas mis en forme grâce à du JavaScript, qui source les infos d'un json créé au préalable.
+
+Le sujet de ce groupe traite des objets étrangers dans le corps humain; fun facts incluses
+
+##Documentation & 
 
 > Travailler sur sa *branch* dans un pemier temps
 >
@@ -6,15 +14,16 @@
 
 > La branch MAIN sera la version finale de notre site, seulement y ajouter nos bouts de code quand on est 100 % certains que ceux-ci sont correct.
 
+## Documentation
 
-## Utilisation de git
-### Initialisation 
+### Utilisation de git
+#### Initialisation 
     git init
 
-### Pour créer sa branch
+#### Pour créer sa branch
     git branch mon_prenom
 
-### Pour aller sur sa branch
+#### Pour aller sur sa branch
     git checkout ma_branch
 
 > Florence = git checkout florence
@@ -70,7 +79,7 @@ les "push" suivants
 
 
 
-> # Simple Workflow with Laravel Mix.
+> ### Simple Workflow with Laravel Mix.
 > 
 > ## Install
 > 
