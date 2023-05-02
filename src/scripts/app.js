@@ -49,26 +49,26 @@ buttonsObject.forEach(button => {
         //   console.log(element)
         //   console.log(key);
         // }
-        positionTable.push(positions[key]);
+        if (!Object.hasOwnProperty.call(positions, key)) {
+          continue;
+        }
+
+        if(positions[key] > 0){
+          positionTable.push(positions[key]);
+          positionNameTable.push(key);
+        }
+        
       }
-      for (const key in positions) {
-        // if (Object.hasOwnProperty.call(positions, key)) {
-        //   const element = positions[key];
-        //   console.log(element)
-        //   console.log(key);
-        // }
-        positionNameTable.push(key);
-      }
+  
       console.log(positionTable);
       console.log(positionNameTable);
-
+      let axisLabel = [];
       positionNameTable.forEach(element => {
-        var i = 0;
         console.log(element);
-        positionNameTable[i] = positionName[i];
-        console.log(positionNameTable[i]);
-        i++;
-        //test
+        let index = Number(element.slice(1))
+        index--;
+        axisLabel.push(positionName[index]);
+
       });
 
       const chart = Highcharts.chart(container, {
@@ -79,7 +79,7 @@ buttonsObject.forEach(button => {
           text: "Nombre de fois que " + objet + " a été trouvé dans..."
         },
         xAxis: {
-          categories: positionName // Utiliser les catégories récupérées depuis le fichier JSON
+          categories: axisLabel // Utiliser les catégories récupérées depuis le fichier JSON
         },
         yAxis: {
           title: {
