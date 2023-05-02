@@ -68,6 +68,7 @@ buttonsObject.forEach(button => {
         positionNameTable[i] = positionName[i];
         console.log(positionNameTable[i]);
         i++;
+        //test
       });
 
       const chart = Highcharts.chart(container, {
