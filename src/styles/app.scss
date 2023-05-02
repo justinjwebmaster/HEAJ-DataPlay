@@ -1,2 +1,80 @@
 @import 'utils/variables';
 @import 'components/type';
+
+@font-face {
+    font-family: GoshaSans;
+    src: url(../assets/PPGoshaSans-Regular.otf);
+  }
+
+body{
+    background-color: #020E12;
+    font-family: GoshaSans;
+    color:#DCFFFD;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin-left:50px;
+    margin-right:50px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+
+    .nav__links {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        list-style: none;
+        width:250px;
+
+        a{
+            text-decoration: none;
+            color:#DCFFFD;
+            &:hover{
+                color:#00FAEB;
+            }
+        }
+    }
+
+}
+
+.main {
+
+    .main__content{
+        display: flex;
+        justify-content: space-around;
+        height:70vh;
+
+        .main__content__bodysvg{
+            width:40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            svg{
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        .main__content__stats {
+            margin-right:0;
+            margin-left:auto;
+            width:60%;
+            background-color: aqua;
+
+            .container{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                height:100%;
+
+                canvas{
+                    height: 100%;
+                    width: 100%;}
+            }
+        }
+    }
+}

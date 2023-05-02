@@ -34,6 +34,7 @@ fetch('/assets/datas/dataset.json')
       {
         type: 'radar',
         options: {
+          maintainAspectRatio: false,
           animation: true,
           responsive: true,
           plugins: {
