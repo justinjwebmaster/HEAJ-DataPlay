@@ -3,6 +3,7 @@ console.info('Hello world');
 import Chart from 'chart.js/auto';
 
 
+
 const numberOfObjectIn = document.getElementById('numberOfObjectIn');
 
 fetch('/assets/datas/dataset.json')

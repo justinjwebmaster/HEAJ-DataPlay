@@ -50,7 +50,7 @@ nav .nav__links a:hover {
   height: 70vh;
 }
 .main .main__content .main__content__bodysvg {
-  width: 40%;
+  width: 35%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,8 +62,8 @@ nav .nav__links a:hover {
 .main .main__content .main__content__stats {
   margin-right: 0;
   margin-left: auto;
-  width: 60%;
-  background-color: aqua;
+  width: 65%;
+  border: 2px outset #00FAEB;
 }
 .main .main__content .main__content__stats .container {
   display: flex;
@@ -74,4 +74,5 @@ nav .nav__links a:hover {
 .main .main__content .main__content__stats .container canvas {
   height: 100%;
   width: 100%;
+  color: #dcfffd;
 }/*# sourceMappingURL=app.css.map */
