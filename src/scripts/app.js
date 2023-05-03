@@ -3,6 +3,8 @@ import Chart from 'chart.js/auto';
 
 var positionName = ["Épaule", "Tronc supérieur", "Coude", "Avant bras", "Poignet", "Genoux", "Partie inférieure de la jambe", "Cheville", "Parties intimes", "Tête", "Visages", "Globe occulaire", "Tronc inférieur", "Partie supérieure du bras", "Partie supérieure de la jambe", "Main", "Pied", "Tout le corps", "Inconnus", "Bouche", "Cou", "Doigt", "Orteille", "Oreille"];
 
+var positionNameDet = ["l'épaule", "le tronc supérieur", "le coude", "l'avant bras", "le poignet", "le genoux", "la partie inférieure de la jambe", "la cheville", "les parties intimes", "la tête", "le visages", "le globe occulaire", "le tronc inférieur", "la partie supérieure du bras", "la partie supérieure de la jambe", "la main", "le pied", "Tout le corps", "Inconnus", "la bouche", "le cou", "le doigt", "l'orteille", "l'oreille"];
+
 //var Highcharts = require('highcharts');  
 // Load module after Highcharts is loaded
 //require('highcharts/modules/exporting')(Highcharts);  
@@ -182,11 +184,16 @@ function bubbleChart(){
 
       var datas = json; 
 
-      var idPart = this.getAttribute('data-id');
+      var getIdPart = this.getAttribute('data-id');
+      var idPart = "p"+getIdPart;
       console.log("partie : "+ idPart);
+
+      var namePart = positionName[getIdPart-1]
+      var namePartDet = positionNameDet[getIdPart-1]
 
       var objectTable = [];
       var objectNameTable = [];
+      var objectsTable = [];
 
       datas.forEach(object => {
         if (object.position[idPart] > 0 && object.id != "tot") {
@@ -195,9 +202,15 @@ function bubbleChart(){
           
           objectTable.push(object.position[idPart]);
           objectNameTable.push(object.objet);
+          objectsTable.push({
+            name: object.objet, 
+            value: object.position[idPart]
+          });
+
           
           console.log("objectTable : "+objectTable);
-          console.log("objectNameTable : "+ objectNameTable)
+          console.log("objectNameTable : "+ objectNameTable);
+          console.log(objectsTable);
         }
       });
 
@@ -206,14 +219,18 @@ function bubbleChart(){
         chart: {
           type: 'packedbubble',
         },
-    
         title: {
-            text: 'Objets dans ' + idPart 
+            text: 'Objets dans ' + namePartDet 
+        },
+        tooltip: {
+          useHTML: false,
+          pointFormat: '<b>{point.name}:</b> {point.y} objets'
         },
     
         series: [{
-          name: "quantité de : " + objectNameTable,
-          data: objectTable
+            name: "",
+          data: objectsTable,
+          color: "#00FFFF"
         }]
     });
     })
@@ -221,4 +238,3 @@ function bubbleChart(){
         console.log('Error: (' + error +')');
     });
 }
-  
