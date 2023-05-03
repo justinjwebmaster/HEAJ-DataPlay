@@ -134,7 +134,7 @@ function inPartObject(){
         }
       });
 
-      const chart = Highcharts.chart(container2, {
+      const chart = Highcharts.chart(container, {
         chart: {
           type: 'column'
         },
