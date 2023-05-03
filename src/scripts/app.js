@@ -115,59 +115,34 @@ function inPartObject(){
 
       var datas = json; 
 
-      var idObject = this.getAttribute('data-id');
-      console.log(idObject);
-  
-      // fait la recherche de toute les positions
-      var item = datas.find(el => el.id == idObject);
-      console.log(item);
+      var idPart = this.getAttribute('data-id');
+      console.log("partie : "+ idPart);
 
-      var objet = item.objet;
-      var positions = item.position;
-      console.log(objet);
-      console.log(positions);
+      var objectTable = [];
+      var objectNameTable = [];
 
-      var positionTable = [];
-      var positionNameTable = [];
-      console.log(positionTable);
-
-      for (const key in positions) {
-        // if (Object.hasOwnProperty.call(positions, key)) {
-        //   const element = positions[key];
-        //   console.log(element)
-        //   console.log(key);
-        // }
-        if (!Object.hasOwnProperty.call(positions, key)) {
-          continue;
+      datas.forEach(object => {
+        if (object.position[idPart] > 0 && object.id != "tot") {
+          console.log("Objet qui a été retrouvé dans " + idPart + " : "+ object.objet);
+          console.log("Nombre d'objet : " + object.position[idPart])
+          
+          objectTable.push(object.position[idPart]);
+          objectNameTable.push(object.objet);
+          
+          console.log("objectTable : "+objectTable);
+          console.log("objectNameTable : "+ objectNameTable)
         }
-
-        if(positions[key] > 0){
-          positionTable.push(positions[key]);
-          positionNameTable.push(key);
-        }
-        
-      }
-  
-      console.log(positionTable);
-      console.log(positionNameTable);
-      let axisLabel = [];
-      positionNameTable.forEach(element => {
-        console.log(element);
-        let index = Number(element.slice(1))
-        index--;
-        axisLabel.push(positionName[index]);
-
       });
 
-      const chart = Highcharts.chart(container, {
+      const chart = Highcharts.chart(container2, {
         chart: {
           type: 'column'
         },
         title: {
-          text: "Nombre de fois que " + objet + " a été trouvé dans..."
+          text: "Nombre d'objet qui ont été trouvés dans " + idPart
         },
         xAxis: {
-          categories: axisLabel // Utiliser les catégories récupérées depuis le fichier JSON
+          categories: objectNameTable // Utiliser les catégories récupérées depuis le fichier JSON
         },
         yAxis: {
           title: {
@@ -175,8 +150,8 @@ function inPartObject(){
           }
         },
         series: [{
-          name: "Quantité de " + objet + " trouvés",
-          data: positionTable // Utiliser les données récupérées depuis le fichier JSON
+          name: "Quantité d'objet trouvés",
+          data: objectTable // Utiliser les données récupérées depuis le fichier JSON
         }]
       });
     })
