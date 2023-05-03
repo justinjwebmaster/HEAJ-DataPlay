@@ -3,15 +3,17 @@ import Chart from 'chart.js/auto';
 
 var positionName = ["Épaule", "Tronc supérieur", "Coude", "Avant bras", "Poignet", "Genoux", "Partie inférieure de la jambe", "Cheville", "Parties intimes", "Tête", "Visages", "Globe occulaire", "Tronc inférieur", "Partie supérieure du bras", "Partie supérieure de la jambe", "Main", "Pied", "Tout le corps", "Inconnus", "Bouche", "Cou", "Doigt", "Orteille", "Oreille"];
 
-var Highcharts = require('highcharts');  
+//var Highcharts = require('highcharts');  
 // Load module after Highcharts is loaded
-require('highcharts/modules/exporting')(Highcharts);  
+//require('highcharts/modules/exporting')(Highcharts);  
+//require('highcharts/es5/highcharts-more')
 // // Create the chart
 // Highcharts.chart('container', { /*Highcharts options*/ });
 
 
 var buttonsObject = document.querySelectorAll('.buttonsObject');
 var buttonsPart = document.querySelectorAll('.buttonsPart');
+var buttonsBubble = document.querySelectorAll('.buttonsBublle');
 
 
 buttonsObject.forEach(button => {
@@ -20,6 +22,10 @@ buttonsObject.forEach(button => {
 
 buttonsPart.forEach(button => {
   button.addEventListener('click', inPartObject)
+});
+
+buttonsBubble.forEach(button => {
+  button.addEventListener('click', bubbleChart)
 });
 
     
@@ -134,26 +140,82 @@ function inPartObject(){
         }
       });
 
-      const chart = Highcharts.chart(container, {
+      Highcharts.chart('container', {
+
         chart: {
-          type: 'column'
+          type: 'radar',
+          polar: true
         },
+    
         title: {
-          text: "Nombre d'objet qui ont été trouvés dans " + idPart
+            text: 'Objets dans ' + idPart 
         },
+    
         xAxis: {
-          categories: objectNameTable // Utiliser les catégories récupérées depuis le fichier JSON
+          categories: objectNameTable
         },
+    
         yAxis: {
-          title: {
-            text: "Quantité"
-          }
+          min: 0
         },
+    
         series: [{
-          name: "Quantité d'objet trouvés",
-          data: objectTable // Utiliser les données récupérées depuis le fichier JSON
+            type: 'area',
+            name: 'Quantité',
+            data: objectTable
         }]
+    });
+    })
+    .catch((error) => {
+        console.log('Error: (' + error +')');
+    });
+}
+
+function bubbleChart(){
+  fetch('/assets/datas/dataset.json')
+    .then((response) => {
+      return response.json();
+    })
+    .then((json) => {
+      // console.log(json);
+      //traitement
+
+      var datas = json; 
+
+      var idPart = this.getAttribute('data-id');
+      console.log("partie : "+ idPart);
+
+      var objectTable = [];
+      var objectNameTable = [];
+
+      datas.forEach(object => {
+        if (object.position[idPart] > 0 && object.id != "tot") {
+          console.log("Objet qui a été retrouvé dans " + idPart + " : "+ object.objet);
+          console.log("Nombre d'objet : " + object.position[idPart])
+          
+          objectTable.push(object.position[idPart]);
+          objectNameTable.push(object.objet);
+          
+          console.log("objectTable : "+objectTable);
+          console.log("objectNameTable : "+ objectNameTable)
+        }
       });
+
+      Highcharts.chart('container', {
+
+        chart: {
+          type: 'packedbubble',
+        },
+    
+        title: {
+            text: 'Objets dans ' + idPart 
+        },
+    
+        series: [{
+          name: "quantité de : " + objectNameTable,
+          data: objectTable
+        }]
+    });
     })
     .catch((error) => {
         console.log('Error: (' + error +')');
