@@ -238,3 +238,7 @@ function bubbleChart(){
         console.log('Error: (' + error +')');
     });
 }
+
+function bubbleChartAll(){
+  
+}
