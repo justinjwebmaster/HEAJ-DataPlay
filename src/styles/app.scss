@@ -20,6 +20,17 @@ body{
 nav {
     display: flex;
     justify-content: space-between;
+    text-transform: uppercase;
+
+    h1{
+        font-size: 1.2rem;
+    }
+
+    .navtext{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
     .nav__links {
         display: flex;
@@ -27,7 +38,9 @@ nav {
         flex-direction: row;
         align-items: center;
         list-style: none;
-        width:20%;
+        width:25%;
+        min-width: 400px;
+
 
         a{
             text-decoration: none;
@@ -41,6 +54,11 @@ nav {
 }
 
 .main {
+
+    .title{
+        margin-top:2%;
+        margin-bottom:25px;
+    }
 
     .main__content{
         display: flex;
@@ -71,7 +89,6 @@ nav {
                 display: flex;
                 height:100%;
                 margin-left:20px;
-                overflow:scroll;
 
                 .objectAndPos{
                     display: flex;

@@ -101,6 +101,9 @@ function nbObjectIn(){
             text: "Quantité"
           }
         },
+        credits: {
+          enabled: false
+        },
         series: [{
           name: "Quantité de " + objet + " trouvés",
           data: positionTable // Utiliser les données récupérées depuis le fichier JSON
@@ -159,6 +162,10 @@ function inPartObject(){
 
         yAxis: {
           min: 0
+        },
+
+        credits: {
+          enabled: false
         },
 
         series: [{
@@ -225,6 +232,9 @@ function bubbleChart(){
         tooltip: {
           useHTML: false,
           pointFormat: '<b>{point.name}:</b> {point.y} objets'
+        },
+        credits: {
+          enabled: false
         },
 
         series: [{
