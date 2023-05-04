@@ -34,7 +34,7 @@ buttonsBulles.forEach(button => {
   button.addEventListener('click', bubbleChart)
 });
 
-    
+// graphique nombre de fois que objet à été retrouvé dans les différentes parties du corps
 function nbObjectIn(){
   fetch(datasetExplo)
     .then((response) => {
@@ -98,16 +98,23 @@ function nbObjectIn(){
           text: "Nombre de fois que " + objet + " a été trouvé dans..."
         },
         xAxis: {
+          crosshair: true,
           categories: axisLabel // Utiliser les catégories récupérées depuis le fichier JSON
         },
         yAxis: {
+          crosshair: true,
           title: {
             text: "Quantité"
           }
         },
+        tooltip: {
+          useHTML: true,
+          pointFormat: '<b>' + objet + '</b> à été retrouvé <b>{point.y}</b> fois.'
+        },
         series: [{
-          name: "Quantité de " + objet + " trouvés dans {point.name}",
-          data: positionTable // Utiliser les données récupérées depuis le fichier JSON
+          name: "",
+          data: positionTable, // Utiliser les données récupérées depuis le fichier JSON
+          color: "#00FFFF"
         }]
       });
     })
@@ -177,6 +184,7 @@ function inPartObject(){
     });
 }
 
+// graphique bulles objets retrouvés dans parties du corps
 function bubbleChart(){
   fetch(datasetExplo)
     .then((response) => {
@@ -237,19 +245,22 @@ function bubbleChart(){
               filter: {
                 property: 'y',
                 operator: '>',
-                value: 250
+                value: 10
               },
               style: {
                 color: 'black',
                 textOutline: 'none',
-                fontWeight: 'normal'
+                fontWeight: 'normal',
+                fontSize: '14px',
               }
             },
           }
         },
         tooltip: {
           useHTML: true,
-          pointFormat: '<b>{point.name} :</b> {point.y}'
+          formatter: function() {
+            return '<b>' + this.point.name + ' :</b> ' + this.point.value;
+          }
         },
     
         series: [{
@@ -262,8 +273,4 @@ function bubbleChart(){
     .catch((error) => {
         console.log('Error: (' + error +')');
     });
-}
-
-function bubbleChartAll(){
-  
 }
