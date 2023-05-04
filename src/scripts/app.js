@@ -9,9 +9,9 @@ var positionNameDet = ["l'épaule", "le tronc supérieur", "le coude", "l'avant 
 var dataset = '/assets/datas/dataset.json';
 var datasetExplo = '/assets/datas/datasetExplo.json';
 
-//var Highcharts = require('highcharts');  
+//var Highcharts = require('highcharts');
 // Load module after Highcharts is loaded
-//require('highcharts/modules/exporting')(Highcharts);  
+//require('highcharts/modules/exporting')(Highcharts);
 //require('highcharts/es5/highcharts-more')
 // // Create the chart
 // Highcharts.chart('container', { /*Highcharts options*/ });
@@ -48,7 +48,7 @@ function nbObjectIn(){
 
       var idObject = this.getAttribute('data-id');
       console.log(idObject);
-  
+
       // fait la recherche de l'objet xx dans le json
       var item = datas.find(el => el.id == idObject);
       console.log(item);
@@ -133,7 +133,7 @@ function inPartObject(){
       // console.log(json);
       //traitement
 
-      var datas = json; 
+      var datas = json;
 
       var idPart = this.getAttribute('data-id');
       console.log("partie : "+ idPart);
@@ -145,10 +145,10 @@ function inPartObject(){
         if (object.position[idPart] > 0 && object.id != "tot") {
           console.log("Objet qui a été retrouvé dans " + idPart + " : "+ object.objet);
           console.log("Nombre d'objet : " + object.position[idPart])
-          
+
           objectTable.push(object.position[idPart]);
           objectNameTable.push(object.objet);
-          
+
           console.log("objectTable : "+objectTable);
           console.log("objectNameTable : "+ objectNameTable)
         }
@@ -160,19 +160,19 @@ function inPartObject(){
           type: 'radar',
           polar: true
         },
-    
+
         title: {
             text: 'Objets dans ' + idPart 
         },
-    
+
         xAxis: {
           categories: objectNameTable
         },
-    
+
         yAxis: {
           min: 0
         },
-    
+
         series: [{
             type: 'area',
             name: 'Quantité',
@@ -195,7 +195,7 @@ function bubbleChart(){
       // console.log(json);
       //traitement
 
-      var datas = json; 
+      var datas = json;
 
       var getIdPart = this.getAttribute('data-id');
       var idPart = "p"+getIdPart;
@@ -212,15 +212,14 @@ function bubbleChart(){
         if (object.position[idPart] > 0 && object.id != "tot") {
           console.log("Objet qui a été retrouvé dans " + idPart + " : "+ object.objet);
           console.log("Nombre d'objet : " + object.position[idPart])
-          
+
           objectTable.push(object.position[idPart]);
           objectNameTable.push(object.objet);
           objectsTable.push({
-            name: object.objet, 
+            name: object.objet,
             value: object.position[idPart]
           });
 
-          
           console.log("objectTable : "+objectTable);
           console.log("objectNameTable : "+ objectNameTable);
           console.log(objectsTable);
@@ -233,7 +232,7 @@ function bubbleChart(){
           type: 'packedbubble',
         },
         title: {
-            text: 'Objets dans ' + namePartDet 
+            text: 'Objets dans ' + namePartDet
         },
         plotOptions: {
           packedbubble: {
@@ -263,7 +262,7 @@ function bubbleChart(){
             return '<b>' + this.point.name + ' :</b> ' + this.point.value;
           }
         },
-    
+
         series: [{
           name: "",
           data: objectsTable,
