@@ -5,6 +5,10 @@ var positionName = ["Épaule", "Tronc supérieur", "Coude", "Avant bras", "Poign
 
 var positionNameDet = ["l'épaule", "le tronc supérieur", "le coude", "l'avant bras", "le poignet", "le genoux", "la partie inférieure de la jambe", "la cheville", "les parties intimes", "la tête", "le visages", "le globe occulaire", "le tronc inférieur", "la partie supérieure du bras", "la partie supérieure de la jambe", "la main", "le pied", "Tout le corps", "Inconnus", "la bouche", "le cou", "le doigt", "l'orteille", "l'oreille"];
 
+
+var dataset = '/assets/datas/dataset.json';
+var datasetExplo = '/assets/datas/datasetExplo.json';
+
 //var Highcharts = require('highcharts');  
 // Load module after Highcharts is loaded
 //require('highcharts/modules/exporting')(Highcharts);  
@@ -15,7 +19,7 @@ var positionNameDet = ["l'épaule", "le tronc supérieur", "le coude", "l'avant 
 
 var buttonsObject = document.querySelectorAll('.buttonsObject');
 var buttonsPart = document.querySelectorAll('.buttonsPart');
-var buttonsBubble = document.querySelectorAll('.buttonsBublle');
+var buttonsBulles = document.querySelectorAll('.buttonsBulles');
 
 
 buttonsObject.forEach(button => {
@@ -26,13 +30,13 @@ buttonsPart.forEach(button => {
   button.addEventListener('click', inPartObject)
 });
 
-buttonsBubble.forEach(button => {
+buttonsBulles.forEach(button => {
   button.addEventListener('click', bubbleChart)
 });
 
     
 function nbObjectIn(){
-  fetch('/assets/datas/dataset.json')
+  fetch(datasetExplo)
     .then((response) => {
       return response.json();
     })
@@ -102,7 +106,7 @@ function nbObjectIn(){
           }
         },
         series: [{
-          name: "Quantité de " + objet + " trouvés",
+          name: "Quantité de " + objet + " trouvés dans {point.name}",
           data: positionTable // Utiliser les données récupérées depuis le fichier JSON
         }]
       });
@@ -113,7 +117,7 @@ function nbObjectIn(){
 }
 
 function inPartObject(){
-  fetch('/assets/datas/dataset.json')
+  fetch(dataset)
     .then((response) => {
       return response.json();
     })
@@ -174,7 +178,7 @@ function inPartObject(){
 }
 
 function bubbleChart(){
-  fetch('/assets/datas/dataset.json')
+  fetch(datasetExplo)
     .then((response) => {
       return response.json();
     })
@@ -222,13 +226,34 @@ function bubbleChart(){
         title: {
             text: 'Objets dans ' + namePartDet 
         },
+        plotOptions: {
+          packedbubble: {
+            layoutAlgorithm: {
+              gravitationalConstant: 0.02,
+            },
+            dataLabels: {
+              enabled: true,
+              format: '{point.name}',
+              filter: {
+                property: 'y',
+                operator: '>',
+                value: 250
+              },
+              style: {
+                color: 'black',
+                textOutline: 'none',
+                fontWeight: 'normal'
+              }
+            },
+          }
+        },
         tooltip: {
-          useHTML: false,
-          pointFormat: '<b>{point.name}:</b> {point.y} objets'
+          useHTML: true,
+          pointFormat: '<b>{point.name} :</b> {point.y}'
         },
     
         series: [{
-            name: "",
+          name: "",
           data: objectsTable,
           color: "#00FFFF"
         }]
