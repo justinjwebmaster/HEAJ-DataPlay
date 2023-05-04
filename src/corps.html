@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="styles/app.css">
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="scripts/app.js" defer></script>
 </head>
 <body>
@@ -45,23 +47,45 @@
 
                     <h2 class="subtitle title--big title--object">Objets</h2>
 
-                    <button class="button buttonsObject" data-id="12">Couvert (12)</button>
-                    <button class="button buttonsObject" data-id="16">Cintres (16)</button>
-
-                    <button class="button buttonsPart" data-id="p1">Partie (1)</button>
-                    <button class="button buttonsPart" data-id="p5">Partie (2)</button>
-
-                    <button class="button buttonsBubble" data-id="5">Partie (5)</button>
-                    <button class="button buttonsBubble" data-id="3">Partie (3)</button>
-
-                    <h3 class="subsubtitle">Nombre total d'objets dans les parties du corps</h3>
-
-                    <div>
-
-                        <canvas id="numberTotal"></canvas>
-
+                    <div class="explo">
+                        <h2>Partie du corps</h2>
+                        <button class="buttonsBulles" data-id="2">Tronc supérieur</button>
+                        <button class="buttonsBulles" data-id="3">Coude</button>
+                        <button class="buttonsBulles" data-id="4">Bras</button>
+                        <button class="buttonsBulles" data-id="5">Poignet</button>
+                        <button class="buttonsBulles" data-id="6">Genou</button>
+                        <button class="buttonsBulles" data-id="7">Partie inférieur de la jambe</button>
+                        <button class="buttonsBulles" data-id="8">Cheville</button>
+                        <button class="buttonsBulles" data-id="9">Parties intimes</button>
+                        <button class="buttonsBulles" data-id="10">Tête</button>
+                        <button class="buttonsBulles" data-id="11">Visages</button>
+                        <button class="buttonsBulles" data-id="12">Globe oculaire</button>
+                        <button class="buttonsBulles" data-id="13">Tronc inférieur</button>
+                        <button class="buttonsBulles" data-id="15">Partie supérieure de la jambe</button>
+                        <button class="buttonsBulles" data-id="16">Main</button>
+                        <button class="buttonsBulles" data-id="17">Pied</button>
+                        <button class="buttonsBulles" data-id="20">Bouche</button>
+                        <button class="buttonsBulles" data-id="21">Cou</button>
+                        <button class="buttonsBulles" data-id="22">Doigt</button>
+                        <button class="buttonsBulles" data-id="23">Orteille</button>
+                        <button class="buttonsBulles" data-id="24">Oreille</button>
+                
+                        <h2>Objet</h2>
+                        <button class="buttonsObject" data-id="12">Couvert</button>
+                        <button class="buttonsObject" data-id="16">Cure-dents</button>
+                        <button class="buttonsObject" data-id="22">Bougies</button>
+                        <button class="buttonsObject" data-id="36">Matériels d'art</button>
+                        <button class="buttonsObject" data-id="50">Statues et vases</button>
+                        <button class="buttonsObject" data-id="87">Batteries</button>
+                        <button class="buttonsObject" data-id="114">Savons</button>
+                        <button class="buttonsObject" data-id="136">Bouteilles</button>
+                        <button class="buttonsObject" data-id="196">Sextoys</button>
+                        <button class="buttonsObject" data-id="198">Bijoux</button>
+                        <button class="buttonsObject" data-id="208">Fournitures de bureau</button>
+                        <button class="buttonsObject" data-id="232">Clous / Vis</button>
                     </div>
-                    </div>
+                
+                    <h3 class="subsubtitle">Graphique adaptatif en fonction du bouton</h3>
 
                     <div id="container"></div>
                 </div>
