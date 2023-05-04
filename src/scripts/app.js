@@ -92,7 +92,7 @@ function nbObjectIn(){
 
       const chart = Highcharts.chart(container, {
         chart: {
-          type: 'column'
+          polar: true
         },
         title: {
           text: "Nombre de fois que " + objet + " a été trouvé dans..."
@@ -114,7 +114,8 @@ function nbObjectIn(){
         series: [{
           name: "",
           data: positionTable, // Utiliser les données récupérées depuis le fichier JSON
-          color: "#00FFFF"
+          color: "#00FFFF",
+          type: 'area'
         }]
       });
     })
