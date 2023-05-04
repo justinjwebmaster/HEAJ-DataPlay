@@ -5,9 +5,9 @@ var positionName = ["Épaule", "Tronc supérieur", "Coude", "Avant bras", "Poign
 
 var positionNameDet = ["l'épaule", "le tronc supérieur", "le coude", "l'avant bras", "le poignet", "le genoux", "la partie inférieure de la jambe", "la cheville", "les parties intimes", "la tête", "le visages", "le globe occulaire", "le tronc inférieur", "la partie supérieure du bras", "la partie supérieure de la jambe", "la main", "le pied", "Tout le corps", "Inconnus", "la bouche", "le cou", "le doigt", "l'orteille", "l'oreille"];
 
-//var Highcharts = require('highcharts');  
+//var Highcharts = require('highcharts');
 // Load module after Highcharts is loaded
-//require('highcharts/modules/exporting')(Highcharts);  
+//require('highcharts/modules/exporting')(Highcharts);
 //require('highcharts/es5/highcharts-more')
 // // Create the chart
 // Highcharts.chart('container', { /*Highcharts options*/ });
@@ -30,7 +30,7 @@ buttonsBubble.forEach(button => {
   button.addEventListener('click', bubbleChart)
 });
 
-    
+
 function nbObjectIn(){
   fetch('/assets/datas/dataset.json')
     .then((response) => {
@@ -40,11 +40,11 @@ function nbObjectIn(){
       // console.log(json);
       //traitement
 
-      var datas = json; 
+      var datas = json;
 
       var idObject = this.getAttribute('data-id');
       console.log(idObject);
-  
+
       // fait la recherche de l'objet xx dans le json
       var item = datas.find(el => el.id == idObject);
       console.log(item);
@@ -72,9 +72,9 @@ function nbObjectIn(){
           positionTable.push(positions[key]);
           positionNameTable.push(key);
         }
-        
+
       }
-  
+
       console.log(positionTable);
       console.log(positionNameTable);
       let axisLabel = [];
@@ -121,7 +121,7 @@ function inPartObject(){
       // console.log(json);
       //traitement
 
-      var datas = json; 
+      var datas = json;
 
       var idPart = this.getAttribute('data-id');
       console.log("partie : "+ idPart);
@@ -133,10 +133,10 @@ function inPartObject(){
         if (object.position[idPart] > 0 && object.id != "tot") {
           console.log("Objet qui a été retrouvé dans " + idPart + " : "+ object.objet);
           console.log("Nombre d'objets : " + object.position[idPart])
-          
+
           objectTable.push(object.position[idPart]);
           objectNameTable.push(object.objet);
-          
+
           console.log("objectTable : "+objectTable);
           console.log("objectNameTable : "+ objectNameTable)
         }
@@ -148,19 +148,19 @@ function inPartObject(){
           type: 'radar',
           polar: true
         },
-    
+
         title: {
-            text: 'Objets dans ' + idPart 
+            text: 'Objets dans ' + idPart
         },
-    
+
         xAxis: {
           categories: objectNameTable
         },
-    
+
         yAxis: {
           min: 0
         },
-    
+
         series: [{
             type: 'area',
             name: 'Quantité',
@@ -182,7 +182,7 @@ function bubbleChart(){
       // console.log(json);
       //traitement
 
-      var datas = json; 
+      var datas = json;
 
       var getIdPart = this.getAttribute('data-id');
       var idPart = "p"+getIdPart;
@@ -199,15 +199,15 @@ function bubbleChart(){
         if (object.position[idPart] > 0 && object.id != "tot") {
           console.log("Objet qui a été retrouvé dans " + idPart + " : "+ object.objet);
           console.log("Nombre d'objets : " + object.position[idPart])
-          
+
           objectTable.push(object.position[idPart]);
           objectNameTable.push(object.objet);
           objectsTable.push({
-            name: object.objet, 
+            name: object.objet,
             value: object.position[idPart]
           });
 
-          
+
           console.log("objectTable : "+objectTable);
           console.log("objectNameTable : "+ objectNameTable);
           console.log(objectsTable);
@@ -220,13 +220,13 @@ function bubbleChart(){
           type: 'packedbubble',
         },
         title: {
-            text: 'Objets dans ' + namePartDet 
+            text: 'Objets dans ' + namePartDet
         },
         tooltip: {
           useHTML: false,
           pointFormat: '<b>{point.name}:</b> {point.y} objets'
         },
-    
+
         series: [{
             name: "",
           data: objectsTable,
