@@ -15,7 +15,7 @@ var positionNameDet = ["l'épaule", "le tronc supérieur", "le coude", "l'avant 
 
 var buttonsObject = document.querySelectorAll('.buttonsObject');
 var buttonsPart = document.querySelectorAll('.buttonsPart');
-var buttonsBubble = document.querySelectorAll('.buttonsBublle');
+var buttonsBubble = document.querySelectorAll('.buttonsBubble');
 
 
 buttonsObject.forEach(button => {
@@ -132,7 +132,7 @@ function inPartObject(){
       datas.forEach(object => {
         if (object.position[idPart] > 0 && object.id != "tot") {
           console.log("Objet qui a été retrouvé dans " + idPart + " : "+ object.objet);
-          console.log("Nombre d'objet : " + object.position[idPart])
+          console.log("Nombre d'objets : " + object.position[idPart])
           
           objectTable.push(object.position[idPart]);
           objectNameTable.push(object.objet);
@@ -198,7 +198,7 @@ function bubbleChart(){
       datas.forEach(object => {
         if (object.position[idPart] > 0 && object.id != "tot") {
           console.log("Objet qui a été retrouvé dans " + idPart + " : "+ object.objet);
-          console.log("Nombre d'objet : " + object.position[idPart])
+          console.log("Nombre d'objets : " + object.position[idPart])
           
           objectTable.push(object.position[idPart]);
           objectNameTable.push(object.objet);

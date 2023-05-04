@@ -1,8 +1,13 @@
 body {
-  font-family: sans-serif;
+  font-family: GoshaSans;
   font-size: $size-text;
   line-height: 1.5;
   color: $c-text;
+}
+
+button{
+  font-family: GoshaSans;
+  font-size: $size-text;
 }
 
 .title {

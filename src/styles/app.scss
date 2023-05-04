@@ -4,11 +4,11 @@
 @font-face {
     font-family: GoshaSans;
     src: url(../assets/PPGoshaSans-Regular.otf);
-  }
+}
 
 body{
     background-color: #020E12;
-    font-family: GoshaSans;
+    line-height: 1.5;
     color:#DCFFFD;
     margin: 0;
     padding: 0;
@@ -27,7 +27,7 @@ nav {
         flex-direction: row;
         align-items: center;
         list-style: none;
-        width:250px;
+        width:20%;
 
         a{
             text-decoration: none;
@@ -47,7 +47,7 @@ nav {
         justify-content: space-around;
         height:70vh;
 
-        .main__content__bodysvg{
+        .main__bodysvg{
             width:35%;
             display: flex;
             justify-content: center;
@@ -59,22 +59,50 @@ nav {
             }
         }
 
-        .main__content__stats {
+        .main__stats {
             margin-right:0;
             margin-left:auto;
             width:65%;
-            border: 2px outset #00FAEB;
+            border: 2px solid #00FAEB;
+            flex-shrink: 0;
+            border-radius: 10px;
 
             .container{
                 display: flex;
-                justify-content: space-around;
-                align-items: center;
                 height:100%;
+                margin-left:20px;
+                overflow:scroll;
 
-                canvas{
-                    height: 100%;
-                    width: 100%;
-                    color:#dcfffd;
+                .objectAndPos{
+                    display: flex;
+
+                    .button{
+                        background-color: #020E12;
+                        border: 2px solid #00FAEB;
+                        border-radius: 5px;
+                        color: #00FAEB;
+                        padding: 5px 5px;
+                        text-align: center;
+                        text-decoration: none;
+                        &:hover{
+                            background-color: #00FAEB;
+                            color: #020E12;
+                            cursor: pointer;
+                        }
+                    }
+
+
+                    canvas{
+                        height: 100%;
+                        width: 100%;
+                        color:#dcfffd;
+                    }
+
+                    #container{
+                        margin-left: 20px;
+                        width: 500px;
+                        height:100%;
+                    }
                 }
             }
         }
