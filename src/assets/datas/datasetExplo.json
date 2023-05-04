@@ -1,6 +1,7 @@
 [
   {
     "id": 12,
+    "objet": "Couverts",
     "url": "/assets/images/objets/12.webp",
     "position": {
       "p2": "",
@@ -29,6 +30,7 @@
   },
   {
     "id": 16,
+    "objet": "Cure-dents",
     "url": "/assets/images/objets/16.webp",
     "position": {
       "p2": "",
@@ -57,6 +59,7 @@
   },
   {
     "id": 22,
+    "objet": "Bougies",
     "url": "/assets/images/objets/22.webp",
     "position": {
       "p2": "",
@@ -85,6 +88,7 @@
   },
   {
     "id": 36,
+    "objet": "Matériel d'art",
     "url": "/assets/images/objets/36.webp",
     "position": {
       "p2": "",
@@ -113,6 +117,7 @@
   },
   {
     "id": 50,
+    "objet": "Statues et vases",
     "url": "/assets/images/objets/50.webp",
     "position": {
       "p2": "",
@@ -141,6 +146,7 @@
   },
   {
     "id": 87,
+    "objet": "Batteries",
     "url": "/assets/images/objets/87.webp",
     "position": {
       "p2": "",
@@ -169,6 +175,7 @@
   },
   {
     "id": 114,
+    "objet": "Savons",
     "url": "/assets/images/objets/114.webp",
     "position": {
       "p2": "",
@@ -197,6 +204,7 @@
   },
   {
     "id": 136,
+    "objet": "Bouteilles",
     "url": "/assets/images/objets/136.webp",
     "position": {
       "p2": 1,
@@ -225,6 +233,7 @@
   },
   {
     "id": 196,
+    "objet": "Sextoys",
     "url": "/assets/images/objets/196.webp",
     "position": {
       "p2": "",
@@ -253,6 +262,7 @@
   },
   {
     "id": 198,
+    "objet": "Bijoux",
     "url": "/assets/images/objets/198.webp",
     "position": {
       "p2": 22,
@@ -281,6 +291,7 @@
   },
   {
     "id": 208,
+    "objet": "Fournitures de bureau",
     "url": "/assets/images/objets/208.webp",
     "position": {
       "p2": 2,
@@ -309,6 +320,7 @@
   },
   {
     "id": 232,
+    "objet": "Clous / vis",
     "url": "/assets/images/objets/232.webp",
     "position": {
       "p2": 1,
@@ -337,6 +349,7 @@
   },
   {
     "id": "tot",
+    "objet": "Total",
     "url": "/assets/images/objets/tot.webp",
     "position": {
       "p2": 26,
