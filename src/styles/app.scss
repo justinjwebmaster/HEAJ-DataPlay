@@ -68,12 +68,21 @@ nav {
             left:120px;
         }
 
-        img{
-            width:950px;
-            height: 700px;
+        .mainindex__background-first{
+            width:58%;
+            height: 550px;
             position:absolute;
             z-index:-1;
             top:80px;
+            left:120px;
+        }
+
+        .mainindex__background-second{
+            width:58%;
+            height: 600px;
+            position:absolute;
+            z-index:-1;
+            top:650px;
             left:120px;
         }
 
@@ -83,6 +92,10 @@ nav {
 
             .title{
                 margin-bottom:25px;
+            }
+
+            .subtitle:not(:first-of-type){
+                margin-top:160px;
             }
         }
     }
@@ -105,10 +118,35 @@ nav {
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
+            height: 100%;
 
-            svg{
+            .main__objet{
                 height: 100%;
                 width: 100%;
+                overflow:hidden;
+                svg{
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+
+            .main__selection{
+                .button{
+                    margin-top: 10px;
+                    background-color: #020E12;
+                    border: 2px solid #00FAEB;
+                    border-radius: 5px;
+                    color: #00FAEB;
+                    padding: 5px 5px;
+                    text-align: center;
+                    text-decoration: none;
+                    &:hover{
+                        background-color: #00FAEB;
+                        color: #020E12;
+                        cursor: pointer;
+                    }
+                }
             }
         }
 
@@ -122,24 +160,27 @@ nav {
 
             .fond{
                 img{
-                    width:61%;
-                    height: 75%;
+                    width:55%;
+                    height: 80%;
                     position:absolute;
                     z-index:-1;
                     top:15%;
-                    right:5%;
+                    right:8%;
                 }
             }
 
             .container{
                 display: flex;
                 height:100%;
-                margin-left:20px;
+                margin-left:65px;
+                width:80%;
+                overflow: scroll;
 
                 .objectAndPos{
                     display: flex;
 
                     .button{
+                        margin-top: 10px;
                         background-color: #020E12;
                         border: 2px solid #00FAEB;
                         border-radius: 5px;
