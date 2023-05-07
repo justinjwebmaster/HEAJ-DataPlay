@@ -92,7 +92,11 @@ function nbObjectIn(){
 
       const chart = Highcharts.chart(container, {
         chart: {
-          polar: true
+          polar: true,
+          backgroundColor: "rgba(0,0,0,0)",
+          style: {
+            color: "#fff"
+          }
         },
         title: {
           text: "Nombre de fois que " + objet + " a été trouvé dans..."
@@ -270,6 +274,46 @@ function bubbleChart(){
           color: "#00FFFF"
         }]
     });
+    })
+    .catch((error) => {
+        console.log('Error: (' + error +')');
+    });
+}
+
+
+
+// créations des stats en fonction des l'objet cliqué
+function statsObject(){
+  fetch(datasetExplo)
+    .then((response) => {
+      return response.json();
+    })
+    .then((json) => {
+      // console.log(json);
+      //traitement
+
+      var datas = json; 
+
+      var idObject = this.getAttribute('data-id');
+      console.log(idObject);
+  
+      // fait la recherche de l'objet xx dans le json
+      var item = datas.find(el => el.id == idObject);
+      console.log(item);
+
+      // fait la recherche de tot  dans le json
+      var tot = datas.find(el => el.id == "tot");
+      console.log(tot);
+
+      var objet = item.objet;
+      var positions = item.position;
+      console.log(objet);
+      console.log(positions);
+
+      var positionTable = [];
+      var positionNameTable = [];
+      console.log(positionTable);
+
     })
     .catch((error) => {
         console.log('Error: (' + error +')');
