@@ -16,10 +16,6 @@ var buttonPart = document.querySelectorAll('.buttonsBulles');
 
 buttonPart.forEach(function(button) {
     button.addEventListener('click', changeArianePartTitle);
-    buttonPart.forEach(element => {
-      element.classList.remove('active');
-    });
-    button.classList.add('active');
 });
 
 function changeArianePartTitle() {
@@ -29,6 +25,13 @@ function changeArianePartTitle() {
 
   filAriane.textContent = partSelected;
   titleExplo.textContent = partSelected;
+
+  // Etat actif
+  buttonPart.forEach(element => {
+    element.classList.remove('active');
+  });
+  this.classList.add('active');
+  
 }
 
 // modification du filAriane et title par l'objet sélectionné

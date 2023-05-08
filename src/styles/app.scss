@@ -182,6 +182,8 @@ nav {
             flex-direction: column;
             height: 100%;
 
+            
+
             svg{
                 height: 100%;
 
@@ -191,6 +193,10 @@ nav {
                         fill-opacity: 1;
                         cursor: pointer;
                     }
+                }
+                .active{
+                  fill: #00FAEB;
+                  fill-opacity: 1;
                 }
             }
 
@@ -268,9 +274,6 @@ nav {
                         }
                     }
 
-                    .active{
-                      background-color: #00FAEB;
-                    }
 
 
                     canvas{
