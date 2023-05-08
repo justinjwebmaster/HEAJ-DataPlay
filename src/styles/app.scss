@@ -187,12 +187,10 @@ nav {
             svg{
                 height: 100%;
 
-                .button{
-                    &:hover{
-                        fill: #00FAEB;
-                        fill-opacity: 1;
-                        cursor: pointer;
-                    }
+                .body__main:hover{
+                    fill: #00FAEB;
+                    fill-opacity: 1;
+                    cursor: pointer;
                 }
                 .active{
                   fill: #00FAEB;

@@ -99,6 +99,26 @@ nav .nav__links a:hover {
   color: #00FAEB;
 }
 
+.corps__heatmap {
+  width: 1000px;
+  height: 800px;
+}
+.corps__heatmap .corps__ul {
+  list-style: none;
+  width: 100px;
+}
+
+.svg__hm {
+  width: 100px;
+}
+
+.brasd__hm {
+  transform: translate(99px, -735px);
+}
+.brasd__hm .svg__hm {
+  width: 60px;
+}
+
 .icons .icon {
   position: absolute;
 }
@@ -193,7 +213,7 @@ nav .nav__links a:hover {
 .main .main__content .main__body svg {
   height: 100%;
 }
-.main .main__content .main__body svg .button:hover {
+.main .main__content .main__body svg .body__main:hover {
   fill: #00FAEB;
   fill-opacity: 1;
   cursor: pointer;
