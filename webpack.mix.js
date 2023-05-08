@@ -15,6 +15,7 @@ mix
   .copy('src/**/*.html', 'dist/')
   .copyDirectory('src/assets', 'dist/assets')
   .js('src/scripts/app.js', 'dist/scripts/')
+  .js('src/scripts/script.js', 'dist/scripts/')
   .sass('src/styles/app.scss', 'styles/', { sassOptions: { outputStyle: 'expanded' } })
   .options({
     processCssUrls: false,
