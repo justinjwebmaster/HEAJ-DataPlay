@@ -44,4 +44,5 @@ mix
         'node_modules'
       ]
     }
-  });
+  })
+  .disableSuccessNotifications();
