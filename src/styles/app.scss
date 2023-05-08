@@ -21,6 +21,7 @@ nav {
     display: flex;
     justify-content: space-between;
     text-transform: uppercase;
+    height:80px;
 
     h1{
         font-size: 1.2rem;
@@ -54,48 +55,22 @@ nav {
 }
 
 .mainindex {
-    margin:5% 40% 5% 5%;
+    z-index:-1;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:calc(100vh - 80px);
     // border: 2px solid #00FAEB;
     border-radius: 10px;
 
     .mainindex__content{
         margin: 2%;
 
-        svg{
-            position:absolute;
-            z-index:-1;
-            top:80px;
-            left:120px;
-        }
-
-        .mainindex__background-first{
-            width:58%;
-            height: 550px;
-            position:absolute;
-            z-index:-1;
-            top:80px;
-            left:120px;
-        }
-
-        .mainindex__background-second{
-            width:58%;
-            height: 600px;
-            position:absolute;
-            z-index:-1;
-            top:650px;
-            left:120px;
-        }
-
         .mainindex__text{
             position:relative;
-            z-index:1;
 
-            .title{
-                margin-bottom:25px;
-            }
-
-            .subtitle:not(:first-of-type){
-                margin-top:160px;
+            .bigtitle{
+                padding-bottom:80px;
             }
         }
     }
