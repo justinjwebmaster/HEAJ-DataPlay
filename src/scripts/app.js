@@ -6,6 +6,7 @@ var positionName = ["Bras", "Main", "Tête", "Tronc supérieur", "Parties intime
 
 var positionNameDet = ["le bras", "la main", "la tête", "le tronc supérieur", "les parties intimes", "la jambes", "les pieds", "les oreilles", "la bouches", "l'oeil"];
 
+var totalOfAllObject = 3462;
 
 var dataset = '/assets/datas/dataset.json';
 var datasetExplo = '/assets/datas/datasetExplo.json';
@@ -175,7 +176,6 @@ function nbObjectIn(){
       console.log(totalOfAll);
 
       // Calcul du nombre total de objets retrouvé
-      var totalOfAllObject = 3462;
       console.log("Total de tous les objets : x" + totalOfAllObject);
       
       // calcul de la stat2
@@ -186,7 +186,7 @@ function nbObjectIn(){
       // Affichage des stats
       // xx% de tout les objets retrouvés sont des {Object}
       var valueStat2 = document.querySelector('.stat2__value');
-      valueStat2.textContent = stat2.toFixed(2) + "%";
+      valueStat2.textContent = stat2 + "%";
       // sont des {Object}
       var objectStat2 = document.querySelector('.stat2__object');
       objectStat2.textContent = objet;
@@ -342,7 +342,49 @@ function bubbleChart(){
           data: objectsTable,
           color: "#00FFFF"
         }]
-    });
+      });
+
+      // ------------ création des stat A
+      // Déclaration des variables statA et récupération de l'objet le plus trouvé et calcul de la statA
+      var statA = 0;
+      var objectMaxVal = Math.max(...objectTable);
+      console.log(objectMaxVal);
+      var objectMax = objectTable.indexOf(objectMaxVal);
+      console.log(objectMax);
+      console.log(objectNameTable[objectMax]);
+      var totObjectInPart = 0;
+      objectTable.forEach(element => {
+        totObjectInPart += element;
+      });
+      console.log(totObjectInPart);
+
+      statA = (objectMaxVal / totObjectInPart) * 100;
+      statA = Math.round(statA * 100) / 100;
+
+      // Affichage des stats
+      // xx% des objets le plus retrouvé dans {partie} est {Object}
+      var valueStatA = document.querySelector('.statA__value');
+      valueStatA.textContent = statA + "%";
+      // dans {partie} est {Object}
+      var partStatA = document.querySelector('.statA__part');
+      partStatA.textContent = namePart;
+      // est {Object}
+      var objectStatA = document.querySelector('.statA__object');
+      objectStatA.textContent = objectNameTable[objectMax];
+
+      // ------------ création des stat B
+      // déclaration des variables statB et calcul de la statB
+      var statB = 0;
+      statB = (totObjectInPart / totalOfAllObject) * 100;
+      statB = Math.round(statB * 100) / 100;
+
+      // xx% de tout le sobjets sont etrouvé dans {partie}
+      var valueStatB = document.querySelector('.statB__value');
+      valueStatB.textContent = statB + "%";
+      // dans la {partie}
+      var partStatB = document.querySelector('.statB__part');
+      partStatB.textContent = namePart;
+
     })
     .catch((error) => {
         console.log('Error: (' + error +')');
