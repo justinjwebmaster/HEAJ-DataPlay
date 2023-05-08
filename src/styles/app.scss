@@ -184,8 +184,54 @@ nav {
 
             svg{
                 height: 100%;
+                display:flex;
 
-                .body__main:hover{
+                .body__main:hover path{
+                    fill: #00FAEB;
+                    fill-opacity: 1;
+                    cursor: pointer;
+                }
+                .body__bras:hover path{
+                    fill: #00FAEB;
+                    fill-opacity: 1;
+                    cursor: pointer;
+                }
+                .body__torse:hover{
+                    fill: #00FAEB;
+                    fill-opacity: 1;
+                    cursor: pointer;
+                }
+                .body__tete:hover{
+                    fill: #00FAEB;
+                    fill-opacity: 1;
+                    cursor: pointer;
+                }
+                .body__oeil:hover path{
+                    fill: #00FAEB;
+                    fill-opacity: 1;
+                    cursor: pointer;
+                }
+                .body__bouche:hover{
+                    fill: #00FAEB;
+                    fill-opacity: 1;
+                    cursor: pointer;
+                }
+                .body__oreille:hover path{
+                    fill: #00FAEB;
+                    fill-opacity: 1;
+                    cursor: pointer;
+                }
+                .body__pied:hover path{
+                    fill: #00FAEB;
+                    fill-opacity: 1;
+                    cursor: pointer;
+                }
+                .body__jambe:hover path{
+                    fill: #00FAEB;
+                    fill-opacity: 1;
+                    cursor: pointer;
+                }
+                .body__bassin:hover{
                     fill: #00FAEB;
                     fill-opacity: 1;
                     cursor: pointer;
