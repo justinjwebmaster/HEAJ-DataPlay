@@ -75,6 +75,13 @@ nav .navtext {
   align-items: center;
   justify-content: center;
 }
+nav .navtext a {
+  text-decoration: none;
+  color: #DCFFFD;
+}
+nav .navtext a:hover {
+  color: #00FAEB;
+}
 nav .nav__links {
   display: flex;
   justify-content: space-between;
@@ -182,6 +189,14 @@ nav .nav__links a:hover {
   align-items: center;
   flex-direction: column;
   height: 100%;
+}
+.main .main__content .main__body svg {
+  height: 100%;
+}
+.main .main__content .main__body svg .button:hover {
+  fill: #00FAEB;
+  fill-opacity: 1;
+  cursor: pointer;
 }
 .main .main__content .main__body .main__objet {
   height: 100%;
