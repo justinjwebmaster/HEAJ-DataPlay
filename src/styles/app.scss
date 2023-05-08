@@ -60,7 +60,24 @@ nav {
     }
 
 }
-
+.corps__heatmap{
+    .corps__ul{
+        list-style: none;
+        width: 100px;
+    }
+    width: 1000px;
+    height: 800px;
+}
+.svg__hm{
+    width: 100px;
+}
+.brasd__hm{
+    transform: translate(99px, -735px);
+    .svg__hm{
+        width: 60px;
+    }
+    
+}
 
 .icons{
     .icon{
