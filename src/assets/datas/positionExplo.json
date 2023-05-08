@@ -1,0 +1,62 @@
+[
+  {
+    "id": "p1",
+    "position": "Bras",
+    "nomMin": "bras",
+    "nomDet": "le bras"
+  },
+  {
+    "id": "p2",
+    "position": "Main",
+    "nomMin": "main",
+    "nomDet": "la main"
+  },
+  {
+    "id": "p3",
+    "position": "Tête",
+    "nomMin": "tête",
+    "nomDet": "la tête"
+  },
+  {
+    "id": "p4",
+    "position": "Tronc Supérieur",
+    "nomMin": "tronc supérieur",
+    "nomDet": "le tronc supérieur"
+  },
+  {
+    "id": "p5",
+    "position": "Partie intime",
+    "nomMin": "partie intime",
+    "nomDet": "les parties intimes"
+  },
+  {
+    "id": "p6",
+    "position": "Jambes",
+    "nomMin": "jambes",
+    "nomDet": "la jambes"
+  },
+  {
+    "id": "p7",
+    "position": "Pieds",
+    "nomMin": "pieds",
+    "nomDet": "le pieds"
+  },
+  {
+    "id": "p8",
+    "position": "Oreille",
+    "nomMin": "oreille",
+    "nomDet": "l'oreille"
+  },
+  {
+    "id": "p9",
+    "position": "Bouche",
+    "nomMin": "bouche",
+    "nomDet": "la bouche"
+  },
+  {
+    "id": "p10",
+    "position": "Œil",
+    "nomMin": "œil",
+    "nomDet": "l'œil"
+  }
+]
