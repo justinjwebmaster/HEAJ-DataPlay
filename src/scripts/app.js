@@ -304,6 +304,7 @@ function bubbleChart(){
 
         chart: {
           type: 'packedbubble',
+          styledMode: true
         },
         title: {
             text: 'Objets dans ' + namePartDet 
@@ -322,6 +323,7 @@ function bubbleChart(){
                 value: 10
               },
               style: {
+                background: 'rgba(255,255,255,0.5)',
                 color: 'black',
                 textOutline: 'none',
                 fontWeight: 'normal',
