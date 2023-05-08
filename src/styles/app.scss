@@ -54,6 +54,62 @@ nav {
 
 }
 
+
+.icons{
+    .icon{
+        position:absolute;
+
+        &:nth-child(1){
+            top: 72%;
+            left: 65%;
+        }
+        &:nth-child(2){
+            top: 70%;
+            left: 50%;
+        }
+        &:nth-child(3){
+            top: 20%;
+            left: 30%;
+        }
+        &:nth-child(4){
+            top: 50%;
+            left: 20%;
+        }
+        &:nth-child(5){
+            top: 70%;
+            left: 80%;
+        }
+        &:nth-child(6){
+            top: 40%;
+            left: 80%;
+        }
+        &:nth-child(7){
+            top: 30%;
+            left: 13%;
+        }
+        &:nth-child(8){
+            top: 20%;
+            left: 60%;
+        }
+        &:nth-child(9){
+            top: 75%;
+            left: 30%;
+        }
+        &:nth-child(10){
+            top: 25%;
+            left: 70%;
+        }
+        &:nth-child(11){
+            top: 23%;
+            left: 45%;
+        }
+        &:nth-child(12){
+            top: 75%;
+            left: 15%;
+        }
+    }
+}
+
 .mainindex {
     z-index:-1;
     display:flex;
@@ -66,10 +122,15 @@ nav {
     .mainindex__content{
         margin: 2%;
 
+        svg{
+            z-index:-1;
+        }
+
         .mainindex__text{
             position:relative;
 
             .bigtitle{
+                z-index:1;
                 padding-bottom:80px;
             }
         }

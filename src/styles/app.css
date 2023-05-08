@@ -23,6 +23,13 @@ h1, h2, h3, h4, h5 {
 
 .title {
   font-size: 2.488rem;
+  color: #00FAEB;
+}
+
+.bigtitle {
+  font-size: 3.583rem;
+  color: #00FAEB;
+  text-transform: uppercase;
 }
 
 .subtitle {
@@ -37,10 +44,6 @@ h1, h2, h3, h4, h5 {
 button, .text_small {
   font-family: Work Sans;
   font-size: 0.833rem;
-}
-
-.title {
-  color: #00FAEB;
 }
 
 @font-face {
@@ -62,6 +65,7 @@ nav {
   display: flex;
   justify-content: space-between;
   text-transform: uppercase;
+  height: 80px;
 }
 nav h1 {
   font-size: 1.2rem;
@@ -88,44 +92,78 @@ nav .nav__links a:hover {
   color: #00FAEB;
 }
 
+.icons .icon {
+  position: absolute;
+}
+.icons .icon:nth-child(1) {
+  top: 72%;
+  left: 65%;
+}
+.icons .icon:nth-child(2) {
+  top: 70%;
+  left: 50%;
+}
+.icons .icon:nth-child(3) {
+  top: 20%;
+  left: 30%;
+}
+.icons .icon:nth-child(4) {
+  top: 50%;
+  left: 20%;
+}
+.icons .icon:nth-child(5) {
+  top: 70%;
+  left: 80%;
+}
+.icons .icon:nth-child(6) {
+  top: 40%;
+  left: 80%;
+}
+.icons .icon:nth-child(7) {
+  top: 30%;
+  left: 13%;
+}
+.icons .icon:nth-child(8) {
+  top: 20%;
+  left: 60%;
+}
+.icons .icon:nth-child(9) {
+  top: 75%;
+  left: 30%;
+}
+.icons .icon:nth-child(10) {
+  top: 25%;
+  left: 70%;
+}
+.icons .icon:nth-child(11) {
+  top: 23%;
+  left: 45%;
+}
+.icons .icon:nth-child(12) {
+  top: 75%;
+  left: 15%;
+}
+
 .mainindex {
-  margin: 5% 40% 5% 5%;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 80px);
   border-radius: 10px;
 }
 .mainindex .mainindex__content {
   margin: 2%;
 }
 .mainindex .mainindex__content svg {
-  position: absolute;
   z-index: -1;
-  top: 80px;
-  left: 120px;
-}
-.mainindex .mainindex__content .mainindex__background-first {
-  width: 58%;
-  height: 550px;
-  position: absolute;
-  z-index: -1;
-  top: 80px;
-  left: 120px;
-}
-.mainindex .mainindex__content .mainindex__background-second {
-  width: 58%;
-  height: 600px;
-  position: absolute;
-  z-index: -1;
-  top: 650px;
-  left: 120px;
 }
 .mainindex .mainindex__content .mainindex__text {
   position: relative;
+}
+.mainindex .mainindex__content .mainindex__text .bigtitle {
   z-index: 1;
-}
-.mainindex .mainindex__content .mainindex__text .title {
-  margin-bottom: 25px;
-}
-.mainindex .mainindex__content .mainindex__text .subtitle:not(:first-of-type) {
-  margin-top: 160px;
+  padding-bottom: 80px;
 }
 
 .main .title {
