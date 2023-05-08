@@ -27,11 +27,12 @@ function changeArianePartTitle() {
   titleExplo.textContent = partSelected;
 
   // Etat actif
-  buttonPart.forEach(element => {
-    element.classList.remove('active');
+  var active = document.querySelectorAll('.active');
+ active.forEach(function(active) {
+    active.classList.remove('active');
   });
+
   this.classList.add('active');
-  
 }
 
 // modification du filAriane et title par l'objet sélectionné
