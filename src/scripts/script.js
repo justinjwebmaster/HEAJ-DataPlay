@@ -8,34 +8,37 @@ var objectName = ["Couvert", "Cure-dents", "Bougies", "Matériel d'art", "Statue
 
 // déclaration variables
 var filAriane = document.querySelector('.filAriane');
+var titleExplo = document.querySelector('.titleExplo');
 
 
-// modification du headerLeft (/partie du corps) par la partie du corps sélectionnée
+// modification du filAriane et title par la partie du corps sélectionnée
 var buttonPart = document.querySelectorAll('.buttonsBulles');
 
 buttonPart.forEach(function(button) {
-    button.addEventListener('click', changeArianePart);
+    button.addEventListener('click', changeArianePartTitle);
 });
 
-function changeArianePart() {
+function changeArianePartTitle() {
   var idPart = this.getAttribute('data-id');
   console.log(idPart);
   var partSelected = positionName[idPart-1];
 
   filAriane.textContent = partSelected;
+  titleExplo.textContent = partSelected;
 }
 
-// modification du headerLeft (/objet) par l'objet sélectionné
+// modification du filAriane et title par l'objet sélectionné
 var buttonPart = document.querySelectorAll('.buttonsObject');
 
 buttonPart.forEach(function(button) {
-    button.addEventListener('click', changeArianeObject);
+    button.addEventListener('click', changeArianeObjectTitle);
 });
 
-function changeArianeObject() {
+function changeArianeObjectTitle() {
   var idObject = this.getAttribute('data-id');
   console.log(idObject);
   var objectSelected = objectName[idObject-1];
 
   filAriane.textContent = objectSelected;
+  titleExplo.textContent = objectSelected;
 }
