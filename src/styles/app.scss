@@ -166,6 +166,14 @@ nav {
 
             svg{
                 height: 100%;
+
+                .button{
+                    &:hover{
+                        fill: #00FAEB;
+                        fill-opacity: 1;
+                        cursor: pointer;
+                    }
+                }
             }
 
             .main__objet{
