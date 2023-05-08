@@ -1,7 +1,5 @@
 # Dataplay - HEAJ 202223 - Dataplaylist
 
-## Branch de Xavier
-
 ## The Uninvited
 
 The Uninvited est un projet dans le cadre de l'atelier Dataplay; le but étant de réaliser un site interactif comprennant des datas mis en forme grâce à du JavaScript, qui source les infos d'un json créé au préalable.
@@ -107,4 +105,3 @@ les "push" suivants
 Not intended to be used in production since minification as been disabled.  
 For school project purpose only. -->
 
->>>>>>> main
