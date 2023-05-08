@@ -116,7 +116,7 @@ function nbObjectIn(){
         series: [{
           name: "",
           data: positionTable, // Utiliser les données récupérées depuis le fichier JSON
-          color: "#00FFFF",
+          color: "rgba(27, 244, 231, .55)",
           type: 'area'
         }]
       });
@@ -304,6 +304,7 @@ function bubbleChart(){
 
         chart: {
           type: 'packedbubble',
+          styledMode: true
         },
         title: {
             text: 'Objets dans ' + namePartDet 
@@ -322,6 +323,7 @@ function bubbleChart(){
                 value: 10
               },
               style: {
+                background: 'rgba(255,255,255,0.5)',
                 color: 'black',
                 textOutline: 'none',
                 fontWeight: 'normal',
@@ -340,7 +342,7 @@ function bubbleChart(){
         series: [{
           name: "",
           data: objectsTable,
-          color: "#00FFFF"
+          color: "rgba(27, 244, 231, .55)"
         }]
     });
     })

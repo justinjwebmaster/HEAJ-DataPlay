@@ -16,6 +16,10 @@ var buttonPart = document.querySelectorAll('.buttonsBulles');
 
 buttonPart.forEach(function(button) {
     button.addEventListener('click', changeArianePartTitle);
+    buttonPart.forEach(element => {
+      element.classList.remove('active');
+    });
+    button.classList.add('active');
 });
 
 function changeArianePartTitle() {

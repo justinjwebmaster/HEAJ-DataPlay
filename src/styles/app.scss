@@ -1,5 +1,6 @@
 @import 'utils/variables';
 @import 'components/type';
+@import 'components/graph';
 
 @font-face {
     font-family: GoshaSans;
@@ -263,6 +264,10 @@ nav {
                             color: #020E12;
                             cursor: pointer;
                         }
+                    }
+
+                    .active{
+                      background-color: #00FAEB;
                     }
 
 
