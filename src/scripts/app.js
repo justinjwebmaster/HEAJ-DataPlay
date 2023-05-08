@@ -118,6 +118,65 @@ function nbObjectIn(){
           type: 'area'
         }]
       });
+
+      // --------------- Création stat 1
+      // Déclaration des variables stat1
+      var totalAllObject = 0;
+      var totalSelectedObject = 0;
+      var stat1 = 0;
+
+      // Calcul du de objectSelected retrouvé
+      positionTable.forEach(element => {
+        totalAllObject += element;
+      });
+      console.log("Total de tous les objets : " + totalAllObject);
+
+      // Trouvé partie la plus toychée et son id
+      var max = 0;
+      var idMax = 0;
+      positionTable.forEach(element => {
+        if (element > max) {
+          max = element;
+          idMax = positionTable.indexOf(element);
+        }
+      });
+      console.log("Nombre max de fois que l'objet a été retrouvé : " + max + " dans la partie : " + positionNameTable[idMax]);
+
+      // Calcul du pourcentage de l'objet sélectionné
+      totalSelectedObject = positionTable[idMax];
+      stat1 = (totalSelectedObject / totalAllObject) * 100;
+      console.log("Pourcentage de l'objet sélectionné : " + stat1 + "%");
+
+      // Affichage des stats
+      // xx% des {Object} sont retrouvé dans {partie}
+      var valueStat1 = document.querySelector('.stat1__value');
+      valueStat1.textContent = stat1 + "%";
+      // des {Object} sont retrouvé dans {partie}
+      var objectStat1 = document.querySelector('.stat1__object');
+      objectStat1.textContent = objet;
+      // sont retrouvé dans {partie}
+      var partStat1 = document.querySelector('.stat1__part');
+      partStat1.textContent = positionNameTable[idMax];
+
+      // --------------- Création stat 2
+      // Déclaration des variables stat2
+      var stat2 = 0;
+
+      // recherche total de tout les objets
+      // fait la recherche de l'objet xx dans le json
+      var tot = datas.find(el => el.id == "tot");
+      console.log("total = "+tot.objet);
+      var totalOfAll = tot.position;
+      console.log(totalOfAll);
+
+      // Calcul du nombre total de objets retrouvé
+      var totalOfAllObject = 0;
+      totalOfAll.forEach(element => {
+        totalOfAllObject += element;
+      });
+      console.log("Total de tous les objets : " + totalOfAllObject);
+      
+      
     })
     .catch((error) => {
         console.log('Error: (' + error +')');
