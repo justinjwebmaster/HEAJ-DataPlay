@@ -193,6 +193,11 @@ nav .nav__links a:hover {
 .main .main__content .main__body svg {
   height: 100%;
 }
+.main .main__content .main__body svg .button:hover {
+  fill: #00FAEB;
+  fill-opacity: 1;
+  cursor: pointer;
+}
 .main .main__content .main__body .main__objet {
   height: 100%;
   width: 100%;
