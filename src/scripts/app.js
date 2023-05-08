@@ -1,9 +1,10 @@
 import Chart from 'chart.js/auto';
 
+var position = ["p1", "p2", "p3", "p4", "p5", "p6", "p7", "p8", "p9", "p10"];
 
-var positionName = ["Épaule", "Tronc supérieur", "Coude", "Avant bras", "Poignet", "Genoux", "Partie inférieure de la jambe", "Cheville", "Parties intimes", "Tête", "Visages", "Globe occulaire", "Tronc inférieur", "Partie supérieure du bras", "Partie supérieure de la jambe", "Main", "Pied", "Tout le corps", "Inconnus", "Bouche", "Cou", "Doigt", "Orteille", "Oreille"];
+var positionName = ["Bras", "Main", "Tête", "Tronc supérieur", "Parties intimes", "Jambes", "Pieds", "Oreilles", "Bouches", "Oeil"];
 
-var positionNameDet = ["l'épaule", "le tronc supérieur", "le coude", "l'avant bras", "le poignet", "le genoux", "la partie inférieure de la jambe", "la cheville", "les parties intimes", "la tête", "le visages", "le globe occulaire", "le tronc inférieur", "la partie supérieure du bras", "la partie supérieure de la jambe", "la main", "le pied", "Tout le corps", "Inconnus", "la bouche", "le cou", "le doigt", "l'orteille", "l'oreille"];
+var positionNameDet = ["le bras", "la main", "la tête", "le tronc supérieur", "les parties intimes", "la jambes", "les pieds", "les oreilles", "la bouches", "l'oeil"];
 
 
 var dataset = '/assets/datas/dataset.json';
@@ -38,6 +39,7 @@ buttonsBulles.forEach(button => {
 function nbObjectIn(){
   fetch(datasetExplo)
     .then((response) => {
+
       return response.json();
     })
     .then((json) => {
@@ -125,22 +127,24 @@ function nbObjectIn(){
       var totalSelectedObject = 0;
       var stat1 = 0;
 
-      // Calcul du de objectSelected retrouvé
+      // Calcul du total de objectSelected retrouvé
       positionTable.forEach(element => {
         totalAllObject += element;
       });
       console.log("Total de tous les objets : " + totalAllObject);
 
-      // Trouvé partie la plus toychée et son id
+      // Trouvé partie la plus touchée et son id
       var max = 0;
-      var idMax = 0;
+      var idMax;
       positionTable.forEach(element => {
         if (element > max) {
           max = element;
           idMax = positionTable.indexOf(element);
         }
       });
-      console.log("Nombre max de fois que l'objet a été retrouvé : " + max + " dans la partie : " + positionNameTable[idMax]);
+      var partie = position.indexOf(positionNameTable[idMax]);
+      console.log("Nombre max de fois que l'objet a été retrouvé : " + max + " dans la partie : " + positionName[partie]);
+      
 
       // Calcul du pourcentage de l'objet sélectionné
       totalSelectedObject = positionTable[idMax];
@@ -150,13 +154,14 @@ function nbObjectIn(){
       // Affichage des stats
       // xx% des {Object} sont retrouvé dans {partie}
       var valueStat1 = document.querySelector('.stat1__value');
+      stat1 = Math.round(stat1 * 100) / 100;
       valueStat1.textContent = stat1 + "%";
       // des {Object} sont retrouvé dans {partie}
       var objectStat1 = document.querySelector('.stat1__object');
       objectStat1.textContent = objet;
       // sont retrouvé dans {partie}
       var partStat1 = document.querySelector('.stat1__part');
-      partStat1.textContent = positionNameTable[idMax];
+      partStat1.textContent = positionName[partie];
 
       // --------------- Création stat 2
       // Déclaration des variables stat2
@@ -170,12 +175,21 @@ function nbObjectIn(){
       console.log(totalOfAll);
 
       // Calcul du nombre total de objets retrouvé
-      var totalOfAllObject = 0;
-      totalOfAll.forEach(element => {
-        totalOfAllObject += element;
-      });
-      console.log("Total de tous les objets : " + totalOfAllObject);
+      var totalOfAllObject = 3462;
+      console.log("Total de tous les objets : x" + totalOfAllObject);
       
+      // calcul de la stat2
+      var stat2 = (totalSelectedObject / totalOfAllObject) * 100;
+      stat2 = Math.round(stat2 * 100) / 100;
+      console.log(totalOfAllObject);
+      
+      // Affichage des stats
+      // xx% de tout les objets retrouvés sont des {Object}
+      var valueStat2 = document.querySelector('.stat2__value');
+      valueStat2.textContent = stat2.toFixed(2) + "%";
+      // sont des {Object}
+      var objectStat2 = document.querySelector('.stat2__object');
+      objectStat2.textContent = objet;
       
     })
     .catch((error) => {
