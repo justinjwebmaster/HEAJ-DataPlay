@@ -119,6 +119,7 @@ function nbObjectIn(){
         exporting: {
           enabled: false
         },
+        legend:{ enabled:false },
         series: [{
           name: "",
           data: positionTable, // Utiliser les données récupérées depuis le fichier JSON
@@ -257,6 +258,7 @@ function inPartObject(){
         exporting: {
           enabled: false
         },
+        legend:{ enabled:false },
     
         series: [{
             type: 'area',
@@ -356,6 +358,7 @@ function bubbleChart(){
         exporting: {
           enabled: false
         },
+        legend:{ enabled:false },
     
         series: [{
           name: "",
