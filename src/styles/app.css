@@ -271,60 +271,60 @@ nav .nav__links a:hover {
   flex-direction: column;
   height: 100%;
 }
-.main .main__content .main__body svg {
+.main .main__content .main__body .body__svg {
   height: 100%;
   display: flex;
 }
-.main .main__content .main__body svg .active, .main .main__content .main__body svg .active path {
+.main .main__content .main__body .body__svg .active, .main .main__content .main__body .body__svg .active path {
   fill: rgba(27, 244, 231, 0.55);
   fill-opacity: 1;
 }
-.main .main__content .main__body svg .body__main:hover path {
-  fill: rgba(27, 244, 231, 0.55);
-  fill-opacity: 1;
-  cursor: pointer;
-}
-.main .main__content .main__body svg .body__bras:hover path {
+.main .main__content .main__body .body__svg .body__main:hover path {
   fill: rgba(27, 244, 231, 0.55);
   fill-opacity: 1;
   cursor: pointer;
 }
-.main .main__content .main__body svg .body__torse:hover {
+.main .main__content .main__body .body__svg .body__bras:hover path {
   fill: rgba(27, 244, 231, 0.55);
   fill-opacity: 1;
   cursor: pointer;
 }
-.main .main__content .main__body svg .body__tete:hover {
+.main .main__content .main__body .body__svg .body__torse:hover {
   fill: rgba(27, 244, 231, 0.55);
   fill-opacity: 1;
   cursor: pointer;
 }
-.main .main__content .main__body svg .body__oeil:hover path {
+.main .main__content .main__body .body__svg .body__tete:hover {
   fill: rgba(27, 244, 231, 0.55);
   fill-opacity: 1;
   cursor: pointer;
 }
-.main .main__content .main__body svg .body__bouche:hover {
+.main .main__content .main__body .body__svg .body__oeil:hover path {
   fill: rgba(27, 244, 231, 0.55);
   fill-opacity: 1;
   cursor: pointer;
 }
-.main .main__content .main__body svg .body__oreille:hover path {
+.main .main__content .main__body .body__svg .body__bouche:hover {
   fill: rgba(27, 244, 231, 0.55);
   fill-opacity: 1;
   cursor: pointer;
 }
-.main .main__content .main__body svg .body__pied:hover path {
+.main .main__content .main__body .body__svg .body__oreille:hover path {
   fill: rgba(27, 244, 231, 0.55);
   fill-opacity: 1;
   cursor: pointer;
 }
-.main .main__content .main__body svg .body__jambe:hover path {
+.main .main__content .main__body .body__svg .body__pied:hover path {
   fill: rgba(27, 244, 231, 0.55);
   fill-opacity: 1;
   cursor: pointer;
 }
-.main .main__content .main__body svg .body__bassin:hover {
+.main .main__content .main__body .body__svg .body__jambe:hover path {
+  fill: rgba(27, 244, 231, 0.55);
+  fill-opacity: 1;
+  cursor: pointer;
+}
+.main .main__content .main__body .body__svg .body__bassin:hover {
   fill: rgba(27, 244, 231, 0.55);
   fill-opacity: 1;
   cursor: pointer;
@@ -344,6 +344,8 @@ nav .nav__links a:hover {
   display: flex;
 }
 .main .main__content .main__body .main__selection .button {
+  width: 80px;
+  height: 80px;
   background-color: #020E12;
   border: none;
   text-align: center;
@@ -351,8 +353,10 @@ nav .nav__links a:hover {
 }
 .main .main__content .main__body .main__selection .button:hover {
   cursor: pointer;
+  fill: #00FAEB;
+  fill-opacity: 1;
 }
-.main .main__content .main__body .main__selection .button:hover svg path {
+.main .main__content .main__body .main__selection .button:hover path {
   fill: #00FAEB;
   fill-opacity: 1;
 }
