@@ -37,7 +37,7 @@ nav {
             color:#DCFFFD;
             &:hover{
                 color:#00FAEB;
-            }  
+            }
         }
     }
 
@@ -77,7 +77,6 @@ nav {
     .svg__hm{
         width: 60px;
     }
-    
 }
 
 .icons{
@@ -182,15 +181,13 @@ nav {
             flex-direction: column;
             height: 100%;
 
-            
-
             svg{
                 height: 100%;
                 display:flex;
 
                 .active, .active path{
-                  fill: rgba(27, 244, 231, .55);
-                  fill-opacity: 1;
+                    fill: rgba(27, 244, 231, .55);
+                    fill-opacity: 1;
                 }
                 .body__main:hover path{
                     fill: rgba(27, 244, 231, .55);

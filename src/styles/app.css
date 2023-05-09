@@ -271,53 +271,57 @@ nav .nav__links a:hover {
   height: 100%;
   display: flex;
 }
+.main .main__content .main__body svg .active, .main .main__content .main__body svg .active path {
+  fill: rgba(27, 244, 231, 0.55);
+  fill-opacity: 1;
+}
 .main .main__content .main__body svg .body__main:hover path {
-  fill: #00FAEB;
+  fill: rgba(27, 244, 231, 0.55);
   fill-opacity: 1;
   cursor: pointer;
 }
 .main .main__content .main__body svg .body__bras:hover path {
-  fill: #00FAEB;
+  fill: rgba(27, 244, 231, 0.55);
   fill-opacity: 1;
   cursor: pointer;
 }
 .main .main__content .main__body svg .body__torse:hover {
-  fill: #00FAEB;
+  fill: rgba(27, 244, 231, 0.55);
   fill-opacity: 1;
   cursor: pointer;
 }
 .main .main__content .main__body svg .body__tete:hover {
-  fill: #00FAEB;
+  fill: rgba(27, 244, 231, 0.55);
   fill-opacity: 1;
   cursor: pointer;
 }
 .main .main__content .main__body svg .body__oeil:hover path {
-  fill: #00FAEB;
+  fill: rgba(27, 244, 231, 0.55);
   fill-opacity: 1;
   cursor: pointer;
 }
 .main .main__content .main__body svg .body__bouche:hover {
-  fill: #00FAEB;
+  fill: rgba(27, 244, 231, 0.55);
   fill-opacity: 1;
   cursor: pointer;
 }
 .main .main__content .main__body svg .body__oreille:hover path {
-  fill: #00FAEB;
+  fill: #rgba 27, 244, 231, 0.55;
   fill-opacity: 1;
   cursor: pointer;
 }
 .main .main__content .main__body svg .body__pied:hover path {
-  fill: #00FAEB;
+  fill: rgba(27, 244, 231, 0.55);
   fill-opacity: 1;
   cursor: pointer;
 }
 .main .main__content .main__body svg .body__jambe:hover path {
-  fill: #00FAEB;
+  fill: rgba(27, 244, 231, 0.55);
   fill-opacity: 1;
   cursor: pointer;
 }
 .main .main__content .main__body svg .body__bassin:hover {
-  fill: #00FAEB;
+  fill: rgba(27, 244, 231, 0.55);
   fill-opacity: 1;
   cursor: pointer;
 }
@@ -384,9 +388,6 @@ nav .nav__links a:hover {
   background-color: #00FAEB;
   color: #020E12;
   cursor: pointer;
-}
-.main .main__content .main__stats .container .objectAndPos .active {
-  background-color: #00FAEB;
 }
 .main .main__content .main__stats .container .objectAndPos canvas {
   height: 100%;
