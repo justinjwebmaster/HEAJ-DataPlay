@@ -253,18 +253,17 @@ nav {
 
             .main__selection{
                 .button{
-                    margin-top: 10px;
                     background-color: #020E12;
-                    border: 2px solid #00FAEB;
-                    border-radius: 5px;
-                    color: #00FAEB;
-                    padding: 5px 5px;
+                    border:none;
                     text-align: center;
                     text-decoration: none;
                     &:hover{
-                        background-color: #00FAEB;
-                        color: #020E12;
                         cursor: pointer;
+
+                        svg path{
+                            fill: #00FAEB;
+                            fill-opacity: 1;
+                        }
                     }
                 }
             }
