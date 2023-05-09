@@ -141,3 +141,21 @@ function objectIn(){
         console.log('Error: (' + error +')');
     });
 }
+// heatmap
+var svgTete = document.getElementById("tete");
+var detailCadre = document.getElementById("detail-tete");
+
+svgTete.addEventListener("mousemove", function(event) {
+	// Récupérer les coordonnées de la souris par rapport au coin supérieur gauche de la page
+	var x = event.pageX;
+	var y = event.pageY;
+
+	// Positionner le cadre de détails à l'emplacement de la souris
+	detailCadre.style.left = x + "px";
+	detailCadre.style.top = y + "px";
+	detailCadre.style.display = "block";
+});
+
+svgTete.addEventListener("mouseout", function() {
+  detailCadre.style.display = "none";
+});

@@ -61,24 +61,31 @@ nav {
     }
 
 }
-.corps__heatmap{
-    .corps__ul{
-        list-style: none;
-        width: 100px;
-    }
-    width: 1000px;
+
+.corps_hm{
+    width: 600px;
     height: 800px;
 }
-.svg__hm{
-    width: 100px;
+#tete{
+    fill-opacity: 1;
 }
-.brasd__hm{
-    transform: translate(99px, -735px);
-    .svg__hm{
-        width: 60px;
+#detail-tete {
+    position: absolute;
+    background-color: rgba(220, 255, 253, 0.600);
+    border-radius: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: none;
+    ul{
+        list-style: none;
+        padding-left: 0;
+        margin-top: 0;
+        margin-right: 10px;
+    }
+    .cadre-tete{
+        color: black;
     }
 }
-
 .icons{
     .icon{
         position:absolute;

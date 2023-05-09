@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SVG avec cadre de détails</title>
+	<style>
+		/* Styles pour le cadre de détails */
+		#detail-cadre {
+			position: absolute;
+			top: 0;
+			right: 0;
+			background-color: white;
+			border: 1px solid black;
+			padding: 10px;
+			display: none;
+		}
+
+		/* Styles pour le SVG */
+		svg {
+			width: 200px;
+			height: 200px;
+			fill: blue;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<!-- SVG avec un cercle à l'intérieur -->
+	<svg viewBox="0 0 100 100" id="svg-cercle">
+		<circle cx="50" cy="50" r="40" />
+	</svg>
+
+	<!-- Cadre de détails qui apparaît au survol -->
+	<div id="detail-cadre">
+		<h3>Détails du cercle</h3>
+		<ul>
+			<li>Rayon : 40 pixels</li>
+			<li>Aire : 5026.55 pixels carrés</li>
+			<li>Circonférence : 251.33 pixels</li>
+		</ul>
+	</div>
+
+	<!-- Script pour afficher/masquer le cadre de détails -->
+	<script>
+		var svgCercle = document.getElementById("svg-cercle");
+		var detailCadre = document.getElementById("detail-cadre");
+
+		svgCercle.addEventListener("mouseover", function() {
+			detailCadre.style.display = "block";
+		});
+
+		svgCercle.addEventListener("mouseout", function() {
+			detailCadre.style.display = "none";
+		});
+	</script>
+
+<svg width="200" height="200">
+    <rect x="0" y="0" width="100" height="100" fill="blue" />
+    <g transform="translate(50,50)" viewBox="0 0 100 100">
+      <rect x="0" y="0" width="100" height="100" fill="red" />
+    </g>
+  </svg>
+
+  <svg viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="40" />
+  </svg>
+  
+</body>
+</html>
