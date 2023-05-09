@@ -165,7 +165,7 @@ nav {
 
     .title{
         margin-top:2%;
-        margin-bottom:25px;
+        margin-bottom:15px;
     }
 
     .main__content{
@@ -294,7 +294,7 @@ nav {
                 height:100%;
                 margin-left:65px;
                 width:80%;
-                overflow: scroll;
+                overflow: auto;
 
                 .objectAndPos{
                     display: flex;
@@ -328,7 +328,7 @@ nav {
                         margin-bottom: auto;
                         margin-left: 20px;
                         width: 500px;
-                        height:80%;
+                        height:75%;
                     }
                 }
             }
