@@ -113,6 +113,12 @@ function nbObjectIn(){
           useHTML: true,
           pointFormat: '<b>' + objet + '</b> à été retrouvé <b>{point.y}</b> fois.'
         },
+        credits: {
+          enabled: false
+        },
+        exporting: {
+          enabled: false
+        },
         series: [{
           name: "",
           data: positionTable, // Utiliser les données récupérées depuis le fichier JSON
@@ -245,6 +251,12 @@ function inPartObject(){
         yAxis: {
           min: 0
         },
+        credits: {
+          enabled: false
+        },
+        exporting: {
+          enabled: false
+        },
     
         series: [{
             type: 'area',
@@ -337,6 +349,12 @@ function bubbleChart(){
           formatter: function() {
             return '<b>' + this.point.name + ' :</b> ' + this.point.value;
           }
+        },
+        credits: {
+          enabled: false
+        },
+        exporting: {
+          enabled: false
         },
     
         series: [{
