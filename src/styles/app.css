@@ -337,8 +337,6 @@ nav .nav__links a:hover {
 .main .main__content .main__body .main__objet svg {
   display: none;
   margin: auto;
-  fill: #00FAEB;
-  fill-opacity: 1;
 }
 .main .main__content .main__body .main__objet svg.active {
   display: flex;
@@ -371,7 +369,7 @@ nav .nav__links a:hover {
   flex-shrink: 0;
   border-radius: 10px;
 }
-.main .main__content .main__stats .fond img {
+.main .main__content .main__stats .fond {
   width: 55%;
   height: 80%;
   position: absolute;
@@ -379,16 +377,24 @@ nav .nav__links a:hover {
   top: 15%;
   right: 8%;
 }
-.main .main__content .main__stats .container {
-  display: flex;
+.main .main__content .main__stats .fond svg {
+  width: 100%;
   height: 100%;
-  margin-left: 65px;
-  margin-top: 2%;
-  width: 80%;
+}
+.main .main__content .main__stats .container {
+  background-color: rgba(189, 213, 221, 0.1);
+  display: flex;
+  height: 95%;
+  margin-left: 55px;
+  margin-top: 3%;
+  width: 82%;
   overflow: auto;
+  z-index: 1;
 }
 .main .main__content .main__stats .container .objectAndPos {
+  margin-top: 2%;
   display: flex;
+  margin-left: 10px;
 }
 .main .main__content .main__stats .container .objectAndPos .button {
   margin-top: 10px;
