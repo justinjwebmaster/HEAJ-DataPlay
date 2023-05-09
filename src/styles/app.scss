@@ -185,7 +185,7 @@ nav {
             flex-direction: column;
             height: 100%;
 
-            svg{
+            .body__svg{
                 height: 100%;
                 display:flex;
 
@@ -270,8 +270,10 @@ nav {
                     text-decoration: none;
                     &:hover{
                         cursor: pointer;
+                        fill: #00FAEB;
+                        fill-opacity: 1;
 
-                        svg path{
+                        path{
                             fill: #00FAEB;
                             fill-opacity: 1;
                         }
