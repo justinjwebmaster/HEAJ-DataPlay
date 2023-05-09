@@ -249,9 +249,16 @@ nav {
                 height: 100%;
                 width: 100%;
                 overflow:hidden;
+
                 svg{
-                    height: 100%;
-                    width: 100%;
+                    display:none;
+                    margin:auto;
+                    fill: #00FAEB;
+                    fill-opacity: 1;
+
+                    &.active{
+                        display:flex;
+                    }
                 }
             }
 
@@ -269,6 +276,10 @@ nav {
                             fill-opacity: 1;
                         }
                     }
+                }
+                .active, .active path{
+                    fill: #00FAEB;
+                    fill-opacity: 1;
                 }
             }
         }
@@ -296,6 +307,7 @@ nav {
                 display: flex;
                 height:100%;
                 margin-left:65px;
+                margin-top:2%;
                 width:80%;
                 overflow: auto;
 
@@ -327,9 +339,6 @@ nav {
                     }
 
                     #container{
-                        margin-top:auto;
-                        margin-bottom: auto;
-                        margin-left: 20px;
                         width: 500px;
                         height:75%;
                     }
