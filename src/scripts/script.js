@@ -55,8 +55,6 @@ function changeArianeObjectTitle() {
 
 // Affichage du nombre d'objet trouvé dans le top de l'explo en fonction de la partie selected
 // xx {objets} retrouvés
-var positionTable = [];
-var positionNameTable = [];
 function objectIn(){
   fetch(datasetExplo)
     .then((response) => {
