@@ -18,7 +18,7 @@ var buttonPart = document.querySelectorAll('.buttonsBulles');
 
 buttonPart.forEach(function(button) {
     button.addEventListener('click', changeArianePartTitle);
-    button.addEventListener('click', objectIn);
+    button.addEventListener('click', objectInPart);
 });
 
 function changeArianePartTitle() {
@@ -30,7 +30,7 @@ function changeArianePartTitle() {
 
   // Etat actif
   var active = document.querySelectorAll('.active');
- active.forEach(function(active) {
+  active.forEach(function(active) {
     active.classList.remove('active');
   });
 
@@ -42,6 +42,7 @@ var buttonObject = document.querySelectorAll('.buttonsObject');
 
 buttonObject.forEach(function(button) {
     button.addEventListener('click', changeArianeObjectTitle);
+    button.addEventListener('click', objectIn);
 });
 
 function changeArianeObjectTitle() {
@@ -54,8 +55,8 @@ function changeArianeObjectTitle() {
 }
 
 // Affichage du nombre d'objet trouvé dans le top de l'explo en fonction de la partie selected
-// xx {objets} retrouvés
-function objectIn(){
+// xx objets retrouvés
+function objectInPart(){
   fetch(datasetExplo)
     .then((response) => {
 
@@ -81,6 +82,59 @@ function objectIn(){
       
 
       
+
+    })
+    .catch((error) => {
+        console.log('Error: (' + error +')');
+    });
+}
+
+// Affichage du nombre d'{objet} identifié dans le top de l'explo en fonction de l'objet selected
+// xx {objets} identifiés
+function objectIn(){
+  fetch(datasetExplo)
+    .then((response) => {
+
+      return response.json();
+    })
+    .then((json) => {
+      // console.log(json);
+      //traitement
+
+      var datas = json; 
+
+      // récupere l'id de la partie cliqué
+      var objectId = this.getAttribute('data-id');
+
+      // fait la recherche de id: tot dans le json
+      var object = datas.find(el => el.id == objectId);
+
+      var object = object.objet;
+      var positions = object.position;
+      console.log("test objet : "+object);
+      console.log("test position : "+positions);
+
+      var positionTable = [];
+      var positionNameTable = [];
+      console.log(positionTable);
+
+      for (const key in positions) {
+        // if (Object.hasOwnProperty.call(positions, key)) {
+        //   const element = positions[key];
+        //   console.log(element)
+        //   console.log(key);
+        // }
+        if (!Object.hasOwnProperty.call(positions, key)) {
+          continue;
+        }
+
+        if(positions[key] > 0){
+          positionTable.push(positions[key]);
+          positionNameTable.push(key);
+        }
+        
+      }
+      console.log("Hoho : "+positionTable);
 
     })
     .catch((error) => {
