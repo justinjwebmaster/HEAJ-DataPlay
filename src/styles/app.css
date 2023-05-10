@@ -456,6 +456,25 @@ nav .menu--active {
   grid-column: 2/6;
 }
 
+.section--9 .div9 .text-big {
+  margin-bottom: 56px;
+}
+.section--9 .div9 .links9 {
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto 260px;
+}
+.section--9 .div9 .links9 .link {
+  display: block;
+  padding: 16px 26px;
+  text-decoration: none;
+  cursor: pointer;
+  color: #DCFFFD;
+  border: 1px solid #00FAEB;
+  background-color: rgba(0, 250, 233, 0.05);
+}
+
 .main__body {
   grid-area: 2/1/3/4;
   display: flex;

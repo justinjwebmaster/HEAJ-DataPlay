@@ -360,6 +360,32 @@ nav {
         grid-column: 2/6;
     }
 }
+.section--9{
+    .div9{
+        .text-big{
+            margin-bottom: 56px;
+        }
+        .links9{
+            text-align: center;
+            display: flex;
+            justify-content: space-evenly;
+            margin: auto 260px;
+
+            .link{
+                display: block;
+                padding: 16px 26px;
+                text-decoration: none;
+                cursor: pointer;
+                color: $c-text;
+                border: 1px solid $c-alt;
+                background-color: rgba(0, 250, 233, 0.05);
+            }
+        }
+    }
+
+}
+
+
 
 
 .main__body{
