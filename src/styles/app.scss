@@ -689,6 +689,39 @@ nav {
             
 
             }
+
+            .funFact__container{
+                width: 384px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 110px;
+                margin-bottom: 100px;
+                display: flex;
+                flex-direction: column;
+                align-items: left;
+                justify-content: center;
+                position: relative;
+
+                .funFact__title{
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    color: $c-alt;
+                    margin-bottom: 10px;
+                }
+    
+                .funFact__text{
+                    font-size: 1rem;
+                    font-weight: 400;
+                    margin-bottom: 10px;
+                }
+            }
+
+            
+
+            
+                
+            
+            
         }
     }
     .container::-webkit-scrollbar{
