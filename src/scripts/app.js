@@ -386,11 +386,14 @@ function graphIndex(){
 
       for(let pIndex = 1; pIndex <= 24; pIndex++){
         let entry = {};
-        entry.name = "p"+pIndex;
+
+        var namePart = positionName[pIndex-1]
+
+        entry.name = namePart;
         entry.data = [];
 
         for(let jsonData of json){
-          if(jsonData.position["p"+pIndex] > 0){
+          if(jsonData.position["p"+pIndex] > 0 && jsonData.id != "tot"){
             entry.data.push({
               name: jsonData.objet,
               value: Number(jsonData.position["p"+pIndex])
@@ -414,22 +417,6 @@ function graphIndex(){
           packedbubble: {
             layoutAlgorithm: {
               gravitationalConstant: 0.02,
-            },
-            dataLabels: {
-              enabled: false,
-              format: '{point.name}',
-              filter: {
-                property: 'y',
-                operator: '>',
-                value: 10
-              },
-              style: {
-                background: 'rgba(255,255,255,0.5)',
-                color: 'black',
-                textOutline: 'none',
-                fontWeight: 'normal',
-                fontSize: '14px',
-              }
             },
           }
         },
