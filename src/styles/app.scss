@@ -594,14 +594,17 @@ nav {
 
 @media (max-width: 600px) {
     html {font-size: 85%;}
-    body{overflow-x: hidden;}
+    body{overflow-x: hidden;width:calc(100vw - 40 * 2)}
     .corps__hm{width: 100%;}
-    .icons{overflow:hidden;}
+    .icon{display:none;}
 }
 
-/*@media (min-width: 601px, max witth: 1000px;){
-
-} */
+@media (min-width: 601px, max-width: 1000px;){
+    html {font-size: 85%;}
+    body{overflow-x: hidden;width:calc(100vw - 40 * 2)}
+    .corps__hm{width: 100%;}
+    .icon{display:none;}
+}
 
 @media (max-width: 1000px){
     nav{
