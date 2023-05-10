@@ -73,8 +73,37 @@ nav {
         a{
             text-decoration: none;
             color:#DCFFFD;
+        }
+
+        .links__el{
+            position: relative;
+
+            &::after{
+                content: "";
+                display: block;
+                width: 0%;
+                transition: width .3s;
+                border-bottom: 1px solid #00FAEB;
+            }
             &:hover{
-                color:#00FAEB;
+                transition: .3s;
+            }
+            &:hover::after{
+                width: 100%;
+                transition: width .3s;
+            }
+        }
+
+        .links__el--active{
+            &::after{
+                position: absolute;
+                content: "";
+                display: block;
+                width: 10%;
+                border-bottom: 1px solid #00FAEB;
+            }
+            &:hover{
+                transition: .3s;
             }
         }
     }
@@ -464,5 +493,44 @@ nav {
     }
     .container::-webkit-scrollbar-track{
         background-color: transparent;
+    }
+}
+
+
+@media (max-width: 1000px){
+    nav{
+        display:block;
+        .nav__links{
+            display:none;
+        }
+    }
+
+    .main__body{
+        display:none;
+    }
+
+    .main__stats{
+        display:none;
+    }
+
+    .warning{
+        grid-area: 2 / 1 / 2 / 10;
+        text-align: center;
+
+        a{
+            // TODO: add link styling here
+            color: $c-text;
+            text-decoration: none;
+
+            &:hover{
+                color: $c-alt;
+            }
+        }
+    }
+}
+
+@media (min-width:1001px){
+    .warning{
+        display:none;
     }
 }
