@@ -147,6 +147,7 @@ nav {
   justify-content: space-between;
   text-transform: uppercase;
   z-index: 2;
+  height: 32px;
 }
 nav h1 {
   font-size: 1.2rem;
@@ -675,18 +676,30 @@ nav .menu--active {
   }
   body {
     overflow-x: hidden;
-    width: 100vw;
+    width: calc(100vw - 80px);
   }
   .corps__hm {
     width: 100%;
   }
-  .icons {
+  .icon {
     display: none;
   }
 }
-/*@media (min-width: 601px, max witth: 1000px;){
-
-} */
+@media (min-width: 601px) and (max-width: 1000px) {
+  html {
+    font-size: 85%;
+  }
+  body {
+    overflow-x: hidden;
+    width: calc(100vw - 80px);
+  }
+  .corps__hm {
+    width: 100%;
+  }
+  .icon {
+    display: none;
+  }
+}
 @media (max-width: 1000px) {
   nav {
     display: block;

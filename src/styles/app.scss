@@ -44,6 +44,7 @@ nav {
     justify-content: space-between;
     text-transform: uppercase;
     z-index: 2;
+    height:32px;
 
     h1{
         font-size: 1.2rem;
@@ -599,14 +600,14 @@ nav {
 
 @media (max-width: 600px) {
     html {font-size: 85%;}
-    body{overflow-x: hidden;width:calc(100vw - 40 * 2)}
+    body{overflow-x: hidden;width:calc(100vw - 80px)}
     .corps__hm{width: 100%;}
     .icon{display:none;}
 }
 
-@media (min-width: 601px, max-width: 1000px;){
+@media (min-width: 601px) and (max-width: 1000px){
     html {font-size: 85%;}
-    body{overflow-x: hidden;width:calc(100vw - 40 * 2)}
+    body{overflow-x: hidden;width:calc(100vw - 80px)}
     .corps__hm{width: 100%;}
     .icon{display:none;}
 }
