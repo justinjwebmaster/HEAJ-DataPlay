@@ -446,13 +446,11 @@ function addStory(){
       var stories = item.stories;
       console.log("les storys "+stories);
 
-      var slide = "<div class='carousel-item active'><p>"+stories[0].story+"</p></div>";
-
       stories.forEach(story => {
-        if (story != "") {
-          console.log("story : "+story.story);
-          storyContainer.innerHTML += "<div class='carousel-item'><p>"+story.story+"</p></div>";
-        }
+        var storyDiv = document.createElement('div');
+        storyDiv.classList.add('slideshow');
+        storyDiv.innerHTML = '<p class="story__text">'+story+'</p>';
+        storyContainer.appendChild(storyDiv);
       });
 
     })
