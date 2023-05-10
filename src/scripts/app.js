@@ -369,6 +369,47 @@ function bubbleChart(){
           color: "rgba(27, 244, 231, .55)"
         }]
     });
+
+    // ------------ création des stat A
+      // Déclaration des variables statA et récupération de l'objet le plus trouvé et calcul de la statA
+      var statA = 0;
+      var objectMaxVal = Math.max(...objectTable);
+      console.log(objectMaxVal);
+      var objectMax = objectTable.indexOf(objectMaxVal);
+      console.log(objectMax);
+      console.log(objectNameTable[objectMax]);
+      var totObjectInPart = 0;
+      objectTable.forEach(element => {
+        totObjectInPart += element;
+      });
+      console.log(totObjectInPart);
+
+      statA = (objectMaxVal / totObjectInPart) * 100;
+      statA = Math.round(statA * 100) / 100;
+
+      // Affichage des stats
+      // xx% des objets le plus retrouvé dans {partie} est {Object}
+      var valueStatA = document.querySelector('.statA__value');
+      valueStatA.textContent = statA + "%";
+      // dans {partie} est {Object}
+      var partStatA = document.querySelector('.statA__part');
+      partStatA.textContent = namePart;
+      // est {Object}
+      var objectStatA = document.querySelector('.statA__object');
+      objectStatA.textContent = objectNameTable[objectMax];
+
+      // ------------ création des stat B
+      // déclaration des variables statB et calcul de la statB
+      var statB = 0;
+      statB = (totObjectInPart / totalOfAllObject) * 100;
+      statB = Math.round(statB * 100) / 100;
+
+      // xx% de tout le sobjets sont etrouvé dans {partie}
+      var valueStatB = document.querySelector('.statB__value');
+      valueStatB.textContent = statB + "%";
+      // dans la {partie}
+      var partStatB = document.querySelector('.statB__part');
+      partStatB.textContent = namePart;
     })
     .catch((error) => {
         console.log('Error: (' + error +')');
