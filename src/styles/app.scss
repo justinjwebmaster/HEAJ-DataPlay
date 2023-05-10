@@ -329,6 +329,7 @@ nav {
 
 .main__body{
     grid-area: 2 / 1 / 3 / 4;
+    transform: translateX(200px);
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -459,9 +460,11 @@ nav {
 }
 .container__corps{
     overflow: hidden;
+    max-width: 100%;
 }
 .main__stats {
     grid-area: 2 / 4 / 3 / 10;
+    transform: translateX(300px);
     border-radius: 10px;
     position:relative;
     .scrollbar--position{
