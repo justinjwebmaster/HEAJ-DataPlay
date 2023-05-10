@@ -150,7 +150,13 @@ function objectIn(){
       });
       console.log("totObject : "+totObject);
 
-      titleExplo.textContent = totObject + " " + object + " identifiés";
+      // titleExplo.textContent = totObject + " " + object + " identifiés";
+
+      if(objectJson.genre == "masculin"){
+        titleExplo.textContent = totObject + " " + object + " identifiés";
+      }else{
+        titleExplo.textContent = totObject + " " + object + " identifiées";
+      }
 
       // Etat actif
       var active = document.querySelectorAll('.active');
