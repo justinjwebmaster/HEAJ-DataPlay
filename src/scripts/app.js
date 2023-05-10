@@ -385,6 +385,8 @@ function addStory(){
       // console.log(json);
       //traitement
 
+      var storyContainer = document.querySelector('.story__container');
+
       var idObject = this.getAttribute('data-id');
       console.log("story : id objet " +idObject);
 
@@ -395,9 +397,12 @@ function addStory(){
       var stories = item.stories;
       console.log("les storys "+stories);
 
+      var slide = "<div class='carousel-item active'><p>"+stories[0].story+"</p></div>";
+
       stories.forEach(story => {
         if (story != "") {
           console.log("story : "+story.story);
+          storyContainer.innerHTML += "<div class='carousel-item'><p>"+story.story+"</p></div>";
         }
       });
 
