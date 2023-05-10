@@ -724,13 +724,7 @@ nav {
                     margin-bottom: 10px;
                 }
             }
-
-            
-
-            
-                
-            
-            
+ 
         }
     }
     .container::-webkit-scrollbar{
@@ -881,7 +875,28 @@ footer{
     html {font-size: 85%;}
     body{overflow-x: hidden;width:calc(100vw - 80px)}
     .corps__hm{width: 100%;}
-
+    @keyframes float1 {
+        0% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+        100% {
+            transform: translateY(0px);
+        }
+    }
+    @keyframes float2 {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+        100% {
+            transform: translateY(0px);
+        }
+    }
 .icons{
     z-index: -1;
     .icon{
