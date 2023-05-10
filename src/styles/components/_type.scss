@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:400');
 
+
+@font-face {
+  font-family: GoshaSans;
+  src: url(../assets/PPGoshaSans-Regular.otf);
+}
+
 body {
   font-family: GoshaSans;
   font-size: $size-text;
