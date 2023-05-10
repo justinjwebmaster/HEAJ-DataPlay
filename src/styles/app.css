@@ -696,11 +696,6 @@ nav .menu--active {
   color: #020E12;
   cursor: pointer;
 }
-.main__stats .container .objectAndPos canvas {
-  height: 100%;
-  width: 100%;
-  color: #DCFFFD;
-}
 .main__stats .container .objectAndPos #container {
   width: 100%;
   height: 700px;
