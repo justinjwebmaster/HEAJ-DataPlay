@@ -22,7 +22,8 @@ body{
     height: calc(100vh - ($border + 40px));
     background-color: $c-bg;
     background-image: url(../assets/images/grid_bg.svg);
-    background-size: cover;
+    background-size:cover;
+    background-position: top 132px right 0px;
     line-height: 1.5;
     color:$c-text;
     margin: 0;
@@ -543,7 +544,7 @@ nav {
 }
 
 
-@media (max-width: 1000px){
+@media (max-width: 999px){
     nav{
         display:block;
         .nav__links{
@@ -585,7 +586,7 @@ nav {
     }
 }
 
-@media (min-width:1001px){
+@media (min-width:1000px){
     .warning{
         display:none;
     }
