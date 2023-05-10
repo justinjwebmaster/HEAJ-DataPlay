@@ -340,7 +340,7 @@ nav {
     }
 }
 
-.section--2, .section--6, .section--9{
+.section--2, .section--9{
     display: flex;
     justify-content: center;
 }
@@ -428,6 +428,19 @@ nav {
             }
         }
     }
+}
+.section--6{
+    .title-little{
+        padding-top: 160px;
+        padding-bottom: 80px;
+        text-align: center;
+    }
+    div{
+        height: 500px;
+    }
+}
+.section--10{
+    height: calc(100vh - 70px);
 }
 
 

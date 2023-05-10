@@ -436,7 +436,7 @@ nav .menu--active {
   text-transform: uppercase;
 }
 
-.section--2, .section--6, .section--9 {
+.section--2, .section--9 {
   display: flex;
   justify-content: center;
 }
@@ -473,6 +473,7 @@ nav .menu--active {
   border: 1px solid #00FAEB;
   background-color: rgba(0, 250, 233, 0.05);
 }
+
 .section--4 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -509,6 +510,19 @@ nav .menu--active {
 .section--4 a:hover .section--4--link p {
   color: #DCFFFD;
   text-decoration: underline;
+}
+
+.section--6 .title-little {
+  padding-top: 160px;
+  padding-bottom: 80px;
+  text-align: center;
+}
+.section--6 div {
+  height: 500px;
+}
+
+.section--10 {
+  height: calc(100vh - 70px);
 }
 
 .main__body {
@@ -723,6 +737,100 @@ nav .menu--active {
 }
 .main__stats .container::-webkit-scrollbar-track {
   background-color: transparent;
+}
+.main__stats .statPart {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 75px;
+}
+.main__stats .statA {
+  background-color: rgba(0, 250, 233, 0.06);
+  width: 336px;
+  height: 214px;
+}
+.main__stats .statA .statA__value {
+  width: 234px;
+  height: 60px;
+  margin-left: 40px;
+  margin-right: 62px;
+  margin-top: 32px;
+  font-size: 40px;
+  color: #00FAEB;
+}
+.main__stats .statA .statA__phrase {
+  width: 256px;
+  height: 58px;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 32px;
+}
+.main__stats .statB {
+  background-color: rgba(0, 250, 233, 0.06);
+  width: 336px;
+  height: 214px;
+}
+.main__stats .statB .statB__value {
+  width: 234px;
+  height: 60px;
+  margin-left: 40px;
+  margin-right: 62px;
+  margin-top: 32px;
+  font-size: 40px;
+  color: #00FAEB;
+}
+.main__stats .statB .statB__phrase {
+  width: 256px;
+  height: 58px;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 32px;
+}
+.main__stats .statObjet {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 75px;
+}
+.main__stats .stat1 {
+  background-color: rgba(0, 250, 233, 0.06);
+  width: 336px;
+  height: 214px;
+}
+.main__stats .stat1 .stat1__value {
+  width: 234px;
+  height: 60px;
+  margin-left: 40px;
+  margin-right: 62px;
+  margin-top: 32px;
+  font-size: 40px;
+  color: #00FAEB;
+}
+.main__stats .stat1 .stat1__phrase {
+  width: 256px;
+  height: 58px;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 32px;
+}
+.main__stats .stat2 {
+  background-color: rgba(0, 250, 233, 0.06);
+  width: 336px;
+  height: 214px;
+}
+.main__stats .stat2 .stat2__value {
+  width: 234px;
+  height: 60px;
+  margin-left: 40px;
+  margin-right: 62px;
+  margin-top: 32px;
+  font-size: 40px;
+  color: #00FAEB;
+}
+.main__stats .stat2 .stat2__phrase {
+  width: 256px;
+  height: 58px;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 32px;
 }
 
 footer {
