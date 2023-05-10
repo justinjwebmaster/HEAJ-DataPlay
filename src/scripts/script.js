@@ -25,6 +25,7 @@ buttonPart.forEach(function(button) {
 });
 
 function changeArianePartTitle() {
+
   var idPart = this.getAttribute('data-id');
   console.log(idPart);
   var partSelected = positionName[idPart-1];
