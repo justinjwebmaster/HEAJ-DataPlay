@@ -598,6 +598,13 @@ nav {
     }
 }
 
+footer{
+    margin-right:40px;
+    margin-left:40px;
+    display:flex;
+    justify-content: space-between;
+}
+
 @media (max-width: 600px) {
     html {font-size: 85%;}
     body{overflow-x: hidden;width:calc(100vw - 80px)}
