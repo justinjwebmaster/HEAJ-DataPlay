@@ -23,7 +23,7 @@ body{
     background-color: $c-bg;
     background-image: url(../assets/images/grid_bg.svg);
     background-size:cover;
-    background-position: top 132px right 0px;
+    // background-position: top 132px right 0px;
     line-height: 1.5;
     color:$c-text;
     margin: 0;
@@ -597,11 +597,14 @@ nav {
     }
 }
 
-/* @media (max-width: 600px) {
-
+@media (max-width: 600px) {
+    html {font-size: 85%;}
+    body{overflow-x: hidden;}
+    .corps__hm{width: 100%;}
+    .icons{overflow:hidden;}
 }
 
-@media (min-width: 601px, max witth: 1000px;){
+/*@media (min-width: 601px, max witth: 1000px;){
 
 } */
 
