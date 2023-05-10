@@ -114,7 +114,7 @@ function nbObjectIn(){
         },
         tooltip: {
           useHTML: true,
-          pointFormat: '<b>' + objet + '</b> à été retrouvé <b>{point.y}</b> fois.'
+          pointFormat: '<b>' + objet + '</b> : <b>{point.y}</b> fois.'
         },
         credits: {
           enabled: false
@@ -169,6 +169,13 @@ function nbObjectIn(){
       // des {Object} sont retrouvé dans {partie}
       var objectStat1 = document.querySelector('.stat1__object');
       objectStat1.textContent = objet;
+      // sont {genre} dans {partie}
+      var genreStat1 = document.querySelector('.stat1__genre');
+      if(item.genre == "masculin"){
+        genreStat1.textContent = "retrouvés";
+      }else{
+        genreStat1.textContent = "retrouvées";
+      }
       // sont retrouvé dans {partie}
       var partStat1 = document.querySelector('.stat1__part');
       partStat1.textContent = positionName[partie];
