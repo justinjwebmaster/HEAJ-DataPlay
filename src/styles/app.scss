@@ -120,7 +120,16 @@ nav {
     }
 
 }
-
+.fond__img{
+    background-image: url(../assets/images/svg-icone.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.fond__corps{
+    background-image: url(../assets/images/corps_hm.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .corps__hm{
     width: 600px;
     height: 800px;
