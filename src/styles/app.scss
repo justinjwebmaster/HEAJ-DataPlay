@@ -285,6 +285,7 @@ nav {
     margin-top:3%;
     margin-left: 2%;
     color: #00FAEB;
+    text-transform: uppercase;
 }
 
 
@@ -479,7 +480,22 @@ nav {
             width: 22px;
         }
     }
-
+    .text__corps--parent{
+        margin-left: 20px;
+        margin-top: 20px;
+        .text__corps{
+            opacity: 1;
+            &:nth-child(1){
+                margin-bottom: 20px;
+            }
+            &:nth-child(2){
+                margin-bottom: 40px;
+            }
+            &:nth-child(3){
+                margin-bottom: 40px;
+            }
+        }
+    }
     .fond{
         width:100%;
         height: 100%;
@@ -537,6 +553,7 @@ nav {
             #container{
                 width: 100%;
                 height: 700px;
+                display: none;
 
             }
         }
