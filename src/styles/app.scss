@@ -468,6 +468,7 @@ nav {
         gap: 73px;
         .box{
             padding: 32px 40px;
+            background-color: rgba(233, 233, 233, 0.04);
 
             h4{
                 font-size: 1.44rem;
@@ -872,9 +873,60 @@ footer{
 }
 
 @media (min-width: 601px) and (max-width: 1000px){
-    html {font-size: 85%;}
-    body{overflow-x: hidden;width:calc(100vw - 80px)}
-    .corps__hm{width: 100%;}
+    html {
+        font-size: 85%;
+    }
+    body{
+        overflow-x: hidden; 
+        width:calc(100vw - 80px)
+    }
+    .corps__hm{
+        width: 100%;
+    }
+
+    /* sections  landing */
+
+    .section--2, .section--9{
+        .text-big{
+            max-width: 80%;
+        }
+    }
+
+    .section--3 .text, .section--7 .text, .section--10 .text {
+        grid-column: 2/9;
+    }
+
+    .section--8 .box-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: -56px;
+    }
+
+/* animations section 1 */
+
+    @keyframes float1 {
+        0% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+        100% {
+            transform: translateY(0px);
+        }
+    }
+    @keyframes float2 {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+        100% {
+            transform: translateY(0px);
+        }
+    }
 .icons{
     z-index: -1;
     .icon{
@@ -937,7 +989,7 @@ footer{
 
 @media (min-width:1001px){
     .warning{
-        display:none;
+        display: none;
     }
 }
 @media (min-width:1001px) and (max-width: 1385px) {
