@@ -9,6 +9,8 @@
 
 body{
     background-color: #020E12;
+    background-image: url(../assets/images/grid_bg.svg);
+    background-size: cover;
     line-height: 1.5;
     color:#DCFFFD;
     margin: 0;
@@ -62,14 +64,13 @@ nav {
 
 }
 
-.corps_hm{
+.corps__hm{
     width: 600px;
     height: 800px;
-}
-#tete{
     fill-opacity: 1;
 }
-#detail-tete {
+
+.detail__hm{
     position: absolute;
     background-color: rgba(220, 255, 253, 0.600);
     border-radius: 15px;
@@ -82,62 +83,115 @@ nav {
         margin-top: 0;
         margin-right: 10px;
     }
-    .cadre-tete{
+    .cadre{
         color: black;
+        .title__cadre{
+            text-transform: uppercase;
+            font-size: 20px;
+            font-weight: bold;
+            .nbr--big{
+                font-size: 24px;
+            }
+        }
     }
 }
 .icons{
     .icon{
         position:absolute;
-
+          @keyframes float1 {
+            0% {
+              transform: translate(0, 0) rotate(0) scale(1);
+            }
+            50% {
+              transform: translate(50px, 50px) rotate(180deg) scale(0.5);
+            }
+            100% {
+              transform: translate(0, 0) rotate(360deg) scale(1);
+            }
+          }
+          @keyframes float2 {
+            0% {
+              transform: translate(0, 0) rotate(0) scale(1);
+            }
+            50% {
+              transform: translate(-50px, -50px) rotate(180deg) scale(2);
+            }
+            100% {
+              transform: translate(0, 0) rotate(360deg) scale(1);
+            }
+        }
         &:nth-child(1){
             top: 72%;
             left: 65%;
+            animation: float1 8s infinite ease-in-out;
+            animation-delay: 2s;
         }
         &:nth-child(2){
             top: 70%;
             left: 50%;
+            animation: float2 6s infinite ease-in-out;
         }
         &:nth-child(3){
-            top: 20%;
-            left: 30%;
+            top: 15%;
+            left: 25%;
+            animation: float1 8s infinite ease-in-out;
+            animation-delay: 2s;
         }
         &:nth-child(4){
             top: 50%;
             left: 20%;
+            animation: float2 6s infinite ease-in-out;
         }
         &:nth-child(5){
             top: 70%;
-            left: 80%;
+            left: 85%;
+            animation: float1 5s infinite ease-in-out;
         }
         &:nth-child(6){
-            top: 40%;
-            left: 80%;
+            top: 55%;
+            left: 90%;
+            animation: float2 8s infinite ease-in-out;
+            animation-delay: 2s;
         }
         &:nth-child(7){
-            top: 30%;
-            left: 13%;
+            top: 23%;
+            left: 10%;
+            animation: float1 5s infinite ease-in-out;
         }
         &:nth-child(8){
             top: 20%;
             left: 60%;
+            animation: float2 6s infinite ease-in-out;
         }
         &:nth-child(9){
             top: 75%;
             left: 30%;
+            animation: float1 8s infinite ease-in-out;
+            animation-delay: 2s;
         }
         &:nth-child(10){
-            top: 25%;
-            left: 70%;
+            top: 20%;
+            left: 80%;
+            animation: float2 6s infinite ease-in-out;
+            animation-delay: 2s;
         }
         &:nth-child(11){
             top: 23%;
             left: 45%;
+            animation: float1 5s infinite ease-in-out;
         }
         &:nth-child(12){
             top: 75%;
-            left: 15%;
+            left: 10%;
+            animation: float2 8s infinite ease-in-out;
+            animation-delay: 5s;
         }
+
+    }
+.title--big{
+    font-size: 3.583rem;
+    color: #00FAEB;
+    text-transform: uppercase;
     }
 }
 

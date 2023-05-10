@@ -1,4 +1,5 @@
 'use strict';
+import { gsap } from "gsap";
 
 var position = ["p1", "p2", "p3", "p4", "p5", "p6", "p7", "p8", "p9", "p10"];
 var positionName = ["Bras", "Main", "Tête", "Tronc supérieur", "Parties intimes", "Jambes", "Pieds", "Oreilles", "Bouches", "Oeil"];
@@ -142,20 +143,90 @@ function objectIn(){
     });
 }
 // heatmap
-var svgTete = document.getElementById("tete");
-var detailCadre = document.getElementById("detail-tete");
+var svgCorps = document.querySelector(".corps__hm");
 
-svgTete.addEventListener("mousemove", function(event) {
-	// Récupérer les coordonnées de la souris par rapport au coin supérieur gauche de la page
+var svgTete = document.getElementById("tete");
+var svgBrasG = document.getElementById("brasg");
+var svgBrasD = document.getElementById("brasd");
+var svgBassin = document.getElementById("bassin");
+var svgJambes = document.getElementById("jambes");
+var svgTorse = document.getElementById("torse");
+
+var detailCadre = document.getElementById("detail-tete");
+var detailCadreBG = document.getElementById("detail-brasg");
+var detailCadreBD = document.getElementById("detail-brasd");
+var detailCadreB = document.getElementById("detail-bassin");
+var detailCadreJ = document.getElementById("detail-jambes");
+var detailCadreT = document.getElementById("detail-torse");
+
+svgCorps.addEventListener("mousemove", function(event) {
 	var x = event.pageX;
 	var y = event.pageY;
+ 
 
-	// Positionner le cadre de détails à l'emplacement de la souris
-	detailCadre.style.left = x + "px";
-	detailCadre.style.top = y + "px";
-	detailCadre.style.display = "block";
+  if (x, y) {
+    svgTete.addEventListener("mouseover", function() {
+      detailCadre.style.left = x + "px";
+      detailCadre.style.top = y + "px";
+      detailCadre.style.display = "block";
+    })
+    svgTete.addEventListener("mouseout", function() {
+      detailCadre.style.display = "none";
+  })
+  }
+  if (x, y) {
+    svgBrasG.addEventListener("mouseover", function() {
+      detailCadreBG.style.left = x + "px";
+      detailCadreBG.style.top = y + "px";
+      detailCadreBG.style.display = "block";
+    })
+    svgBrasG.addEventListener("mouseout", function() {
+      detailCadreBG.style.display = "none";
+  })
+  }
+  if (x, y) {
+    svgBrasD.addEventListener("mouseover", function() {
+      detailCadreBD.style.left = x + "px";
+      detailCadreBD.style.top = y + "px";
+      detailCadreBD.style.display = "block";
+    })
+    svgBrasD.addEventListener("mouseout", function() {
+      detailCadreBD.style.display = "none";
+  })
+  }
+  if (x, y) {
+    svgBassin.addEventListener("mouseover", function() {
+      detailCadreB.style.left = x + "px";
+      detailCadreB.style.top = y + "px";
+      detailCadreB.style.display = "block";
+    })
+    svgBassin.addEventListener("mouseout", function() {
+      detailCadreB.style.display = "none";
+  })
+  }
+  if (x, y) {
+    svgJambes.addEventListener("mouseover", function() {
+      detailCadreJ.style.left = x + "px";
+      detailCadreJ.style.top = y + "px";
+      detailCadreJ.style.display = "block";
+    })
+    svgJambes.addEventListener("mouseout", function() {
+      detailCadreJ.style.display = "none";
+  })
+  }
+  if (x, y) {
+    svgTorse.addEventListener("mouseover", function() {
+      detailCadreT.style.left = x + "px";
+      detailCadreT.style.top = y + "px";
+      detailCadreT.style.display = "block";
+    })
+    svgTorse.addEventListener("mouseout", function() {
+      detailCadreT.style.display = "none";
+  })
+  }
+
 });
 
-svgTete.addEventListener("mouseout", function() {
-  detailCadre.style.display = "none";
-});
+
+
+
