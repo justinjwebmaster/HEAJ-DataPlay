@@ -191,11 +191,10 @@ var detailCadreBD = document.getElementById("detail-brasd");
 var detailCadreB = document.getElementById("detail-bassin");
 var detailCadreJ = document.getElementById("detail-jambes");
 var detailCadreT = document.getElementById("detail-torse");
-if (svgCorps == true) {
+if (svgCorps) {
 svgCorps.addEventListener("mousemove", function(event) {
 	var x = event.pageX;
 	var y = event.pageY;
- 
 
   if (x, y) {
     svgTete.addEventListener("mouseover", function() {
