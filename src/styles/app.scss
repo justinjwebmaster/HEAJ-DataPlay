@@ -360,6 +360,24 @@ nav {
     }
 }
 
+.section--4{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: min-content;
+    grid-column-gap: 20px;
+    .title{
+        grid-column: 2/6;
+        margin-top: 20vh;
+    }
+    .text{
+        grid-column: 2/6;
+    }
+
+    & > *{
+        justify-self: center;
+    }
+}
+
 
 .main__body{
     grid-area: 2 / 1 / 3 / 4;

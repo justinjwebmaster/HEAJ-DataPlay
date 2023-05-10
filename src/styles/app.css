@@ -455,6 +455,23 @@ nav .menu--active {
   grid-column: 2/6;
 }
 
+.section--4 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: min-content;
+  grid-column-gap: 20px;
+}
+.section--4 .title {
+  grid-column: 2/6;
+  margin-top: 20vh;
+}
+.section--4 .text {
+  grid-column: 2/6;
+}
+.section--4 > * {
+  justify-self: center;
+}
+
 .main__body {
   grid-area: 2/1/3/4;
   display: flex;
