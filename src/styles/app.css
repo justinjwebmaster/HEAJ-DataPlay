@@ -178,6 +178,9 @@ nav .nav__links a {
 nav .nav__links a:hover {
   color: #00FAEB;
 }
+nav .menu--active {
+  border-bottom: 1px solid #DCFFFD;
+}
 
 .corps__hm {
   width: 600px;
@@ -343,6 +346,50 @@ nav .nav__links a:hover {
   margin-top: 3%;
 }
 
+/* STYLE TEXT LANDING */
+.title-big {
+  font-size: 5.16rem;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: 2.488rem;
+  margin-bottom: 48px;
+}
+
+.title-little {
+  font-size: 1.728rem;
+  margin-bottom: 16px;
+}
+
+.text-big {
+  font-size: 1.44rem;
+  margin-bottom: 24px;
+  font-family: Work Sans;
+}
+
+.text {
+  margin-bottom: 24px;
+  font-family: Work Sans;
+}
+
+.text-little {
+  font-size: 0.833rem;
+}
+
+.legend-number {
+  font-size: 0.694rem;
+}
+
+.text-color {
+  color: #00FAEB;
+}
+
+.text--center {
+  text-align: center;
+}
+
 .main__body {
   grid-area: 2/1/3/4;
   display: flex;
@@ -461,6 +508,10 @@ nav .nav__links a:hover {
   fill-opacity: 1;
 }
 
+.container__corps {
+  overflow: hidden;
+}
+
 .main__stats {
   grid-area: 2/4/3/10;
   border-radius: 10px;
@@ -492,6 +543,7 @@ nav .nav__links a:hover {
   margin-left: 10px;
   width: 100%;
   flex-direction: column;
+  height: 1000px;
 }
 .main__stats .container .objectAndPos .button {
   margin-top: 10px;
@@ -516,4 +568,10 @@ nav .nav__links a:hover {
 .main__stats .container .objectAndPos #container {
   width: 100%;
   height: 100%;
+}
+.main__stats .container::-webkit-scrollbar {
+  width: 12px;
+}
+.main__stats .container::-webkit-scrollbar-track {
+  background-color: transparent;
 }/*# sourceMappingURL=app.css.map */
