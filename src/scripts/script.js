@@ -158,7 +158,7 @@ var detailCadreBD = document.getElementById("detail-brasd");
 var detailCadreB = document.getElementById("detail-bassin");
 var detailCadreJ = document.getElementById("detail-jambes");
 var detailCadreT = document.getElementById("detail-torse");
-
+if (svgCorps == true) {
 svgCorps.addEventListener("mousemove", function(event) {
 	var x = event.pageX;
 	var y = event.pageY;
@@ -226,7 +226,7 @@ svgCorps.addEventListener("mousemove", function(event) {
   }
 
 });
-
+}
 
 
 
