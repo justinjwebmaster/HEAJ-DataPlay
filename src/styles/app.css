@@ -543,7 +543,7 @@ nav .menu--active {
 .main__stats .container .objectAndPos canvas {
   height: 100%;
   width: 100%;
-  color: #dcfffd;
+  color: #DCFFFD;
 }
 .main__stats .container .objectAndPos #container {
   width: 100%;
@@ -571,6 +571,15 @@ nav .menu--active {
   }
   .warning {
     grid-area: 2/1/2/10;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    color: #00FAEB;
+    margin-top: -56px;
+  }
+  .warning .paragraph {
+    max-width: 600px;
     text-align: center;
   }
   .warning a {

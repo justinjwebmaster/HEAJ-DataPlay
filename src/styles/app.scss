@@ -20,11 +20,11 @@ $border: 56px;
 
 body{
     height: calc(100vh - ($border + 40px));
-    background-color: #020E12;
+    background-color: $c-bg;
     background-image: url(../assets/images/grid_bg.svg);
     background-size: cover;
     line-height: 1.5;
-    color:#DCFFFD;
+    color:$c-text;
     margin: 0;
     padding: 0;
     margin-left: 40px;
@@ -52,9 +52,9 @@ nav {
         justify-content: center;
         a{
             text-decoration: none;
-            color:#DCFFFD;
+            color:$c-text;
             &:hover{
-                color:#00FAEB;
+                color:$c-alt;
             }
         }
     }
@@ -72,7 +72,7 @@ nav {
 
         a{
             text-decoration: none;
-            color:#DCFFFD;
+            color:$c-text;
         }
 
         .links__el{
@@ -83,7 +83,7 @@ nav {
                 display: block;
                 width: 0%;
                 transition: width .3s;
-                border-bottom: 1px solid #00FAEB;
+                border-bottom: 1px solid $c-alt;
             }
             &:hover{
                 transition: .3s;
@@ -100,7 +100,7 @@ nav {
                 content: "";
                 display: block;
                 width: 10%;
-                border-bottom: 1px solid #00FAEB;
+                border-bottom: 1px solid $c-alt;
             }
             &:hover{
                 transition: .3s;
@@ -108,7 +108,7 @@ nav {
         }
     }
     .menu--active{
-        border-bottom: 1px solid #DCFFFD;
+        border-bottom: 1px solid $c-text;
     }
 
 }
@@ -243,7 +243,7 @@ nav {
     }
 .title--big{
     font-size: 3.583rem;
-    color: #00FAEB;
+    color: $c-alt;
     text-transform: uppercase;
     }
 }
@@ -254,7 +254,7 @@ nav {
     justify-content: center;
     align-items: center;
     height:calc(100vh - 80px);
-    // border: 2px solid #00FAEB;
+    // border: 2px solid $c-alt;
     border-radius: 10px;
 
     .mainindex__content{
@@ -393,17 +393,17 @@ nav {
                 }
                 &:hover{
                     cursor: pointer;
-                    fill: #00FAEB;
+                    fill: $c-alt;
                     fill-opacity: 1;
 
                     path{
-                        fill: #00FAEB;
+                        fill: $c-alt;
                         fill-opacity: 1;
                     }
                 }
             }
             .active, .active path{
-                fill: #00FAEB;
+                fill: $c-alt;
                 fill-opacity: 1;
             }
         }
@@ -448,16 +448,16 @@ nav {
 
             .button{
                 margin-top: 10px;
-                background-color: #020E12;
-                border: 2px solid #00FAEB;
+                background-color: $c-bg;
+                border: 2px solid $c-alt;
                 border-radius: 5px;
-                color: #00FAEB;
+                color: $c-alt;
                 padding: 5px 5px;
                 text-align: center;
                 text-decoration: none;
                 &:hover{
-                    background-color: #00FAEB;
-                    color: #020E12;
+                    background-color: $c-alt;
+                    color: $c-bg;
                     cursor: pointer;
                 }
             }
@@ -467,7 +467,7 @@ nav {
             canvas{
                 height: 100%;
                 width: 100%;
-                color:#dcfffd;
+                color:$c-text;
             }
 
             #container{
@@ -503,7 +503,17 @@ nav {
 
     .warning{
         grid-area: 2 / 1 / 2 / 10;
-        text-align: center;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        color: $c-alt;
+        margin-top: calc(0px - $border);
+
+        .paragraph{
+            max-width: 600px;
+            text-align: center;
+        }
 
         a{
             // TODO: add link styling here
