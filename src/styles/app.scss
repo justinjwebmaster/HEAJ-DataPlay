@@ -860,28 +860,6 @@ footer{
     html {font-size: 85%;}
     body{overflow-x: hidden;width:calc(100vw - 80px)}
     .corps__hm{width: 100%;}
-    @keyframes float1 {
-        0% {
-            transform: translate(0, 0) rotate(0);
-        }
-        50% {
-            transform: translate(50px, 50px) rotate(180deg);
-        }
-        100% {
-            transform: translate(0, 0) rotate(360deg);
-        }
-    }
-    @keyframes float2 {
-        0% {
-            transform: translate(0, 0) rotate(0);
-        }
-        50% {
-            transform: translate(-50px, -50px) rotate(180deg);
-        }
-        100% {
-            transform: translate(0, 0) rotate(360deg);
-        }
-    }
 .icons{
     z-index: -1;
     .icon{
@@ -897,36 +875,13 @@ footer{
     }
 }
 
-
-
 }
 
 @media (min-width: 601px) and (max-width: 1000px){
     html {font-size: 85%;}
     body{overflow-x: hidden;width:calc(100vw - 80px)}
     .corps__hm{width: 100%;}
-    @keyframes float1 {
-        0% {
-            transform: translateY(0px);
-        }
-        50% {
-            transform: translateY(-20px);
-        }
-        100% {
-            transform: translateY(0px);
-        }
-    }
-    @keyframes float2 {
-        0% {
-            transform: translateY(0);
-        }
-        50% {
-            transform: translateY(-20px);
-        }
-        100% {
-            transform: translateY(0px);
-        }
-    }
+
 .icons{
     z-index: -1;
     .icon{
@@ -991,4 +946,17 @@ footer{
     .warning{
         display:none;
     }
+}
+@media (min-width:1001px) and (max-width: 1385px) {
+    .stats__container {
+        .statPart {
+            transform: scale(0.6);
+        }
+    }
+    .stats__container {
+        .statObjet {
+            transform: scale(0.6);
+        }
+    }
+    
 }
