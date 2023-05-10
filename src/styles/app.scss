@@ -23,7 +23,7 @@ body{
     background-color: $c-bg;
     background-image: url(../assets/images/grid_bg.svg);
     background-size:cover;
-    background-position: top 132px right 0px;
+    // background-position: top 132px right 0px;
     line-height: 1.5;
     color:$c-text;
     margin: 0;
@@ -44,6 +44,7 @@ nav {
     justify-content: space-between;
     text-transform: uppercase;
     z-index: 2;
+    height:32px;
 
     h1{
         font-size: 1.2rem;
@@ -299,6 +300,7 @@ nav {
     font-size: 5.16rem;
     margin-bottom: 16px;
     text-transform: uppercase;
+    text-align: center;
 }
 
 .title{
@@ -313,10 +315,16 @@ nav {
     font-size: 1.44rem;
     margin-bottom: 24px;
     font-family: Work Sans;
+    text-align: center;
+    max-width: 1059px;
+}
+.text-big--solo{
+    padding-top: 50.01vh;
 }
 .text{
     margin-bottom: 24px;
     font-family: Work Sans;
+    max-width: 625px;
 }
 .text-little{
     font-size: 0.833rem;
@@ -330,6 +338,28 @@ nav {
 .text--center{
     text-align: center;
 }
+
+/* text inteface */
+.text-i{
+    max-width: 550px;
+}
+
+/* sections landing */
+
+.section{
+    height: 100vh;
+    width: 100vw;
+}
+
+.section--1 .text-big span {
+    text-transform: uppercase;
+}
+
+.section--2, .section--6, .section--9{
+    display: flex;
+    justify-content: center;
+}
+
 
 
 .main__body{
@@ -568,13 +598,19 @@ nav {
     }
 }
 
-/* @media (max-width: 600px) {
-
+@media (max-width: 600px) {
+    html {font-size: 85%;}
+    body{overflow-x: hidden;width:calc(100vw - 80px)}
+    .corps__hm{width: 100%;}
+    .icon{display:none;}
 }
 
-@media (min-width: 601px, max witth: 1000px;){
-
-} */
+@media (min-width: 601px) and (max-width: 1000px){
+    html {font-size: 85%;}
+    body{overflow-x: hidden;width:calc(100vw - 80px)}
+    .corps__hm{width: 100%;}
+    .icon{display:none;}
+}
 
 @media (max-width: 1000px){
     nav{
