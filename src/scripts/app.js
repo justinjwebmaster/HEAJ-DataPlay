@@ -4,6 +4,8 @@ var position = ["p1", "p2", "p3", "p4", "p5", "p6", "p7", "p8", "p9", "p10"];
 
 var positionName = ["Bras", "Main", "Tête", "Tronc supérieur", "Parties intimes", "Jambes", "Pieds", "Oreilles", "Bouches", "Oeil"];
 
+var positionNameComplet = ["Épaules", "Tronc supérieur", "Coudes", "Avant-bras", "Poignets", "Genoux", "Partie inférieure de la jambe", "Chevilles", "Parties intimes", "Tête", "Visage", "Globe occulaire", "Tronc inférieur", "Partie supérieure du bras", "Partie supérieure de la jambe", "Mains", "Pieds", "Tout le corps", "Inconnu", "Bouche", "Cou", "Doigts", "Orteilles", "Oreilles"]
+
 var positionNameDet = ["le bras", "la main", "la tête", "le tronc supérieur", "les parties intimes", "la jambes", "les pieds", "les oreilles", "la bouches", "l'oeil"];
 
 var totalOfAllObject = 3462;
@@ -97,7 +99,7 @@ function nbObjectIn(){
       const chart = Highcharts.chart(container, {
         chart: {
           polar: true,
-          height: '100%'
+          height: '500px'
         },
         title: {
           text: ""
@@ -329,7 +331,7 @@ function bubbleChart(){
         chart: {
           type: 'packedbubble',
           styledMode: true,
-          height: '100%'
+          height: '500px'
         },
         title: {
             text: ''
@@ -466,7 +468,7 @@ function graphIndex(){
       for(let pIndex = 1; pIndex <= 24; pIndex++){
         let entry = {};
 
-        var namePart = positionName[pIndex-1]
+        var namePart = positionNameComplet[pIndex-1]
 
         entry.name = namePart;
         entry.data = [];
@@ -483,11 +485,12 @@ function graphIndex(){
       }
       console.log(datas);
 
-      Highcharts.chart('container', {
+      Highcharts.chart('containerIndex', {
 
         chart: {
           type: 'packedbubble',
-          styledMode: true
+          styledMode: true,
+          height: '700px'
         },
         title: {
             text: ''
@@ -511,7 +514,7 @@ function graphIndex(){
         exporting: {
           enabled: false
         },
-        legend:{ enabled:false },
+        legend:{ enabled:true },
 
         series: datas.series
     });
