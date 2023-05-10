@@ -20,9 +20,9 @@ $border: 56px;
 
 body{
     background-color: $c-bg;
-    background-image: url(../assets/images/grid_bg.svg);
-    background-size:cover;
-    // background-position: top 132px right 0px;
+    background-image: url(../assets/images/quadrillage.svg);
+    background-size:contain;
+    background-position: top 132px right 0px;
     line-height: 1.5;
     color:$c-text;
     margin: 0;
