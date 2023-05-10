@@ -92,6 +92,10 @@ function changeArianeObjectTitle() {
   var objectSelected = objectName[idObject-1];
 
   filAriane.textContent = objectSelected;
+
+
+  textCorpsParent.classList.add('hidden');
+  statContainer.classList.remove('hidden');
 }
 
 // Affichage du nombre d'{objet} identifié dans le top de l'explo en fonction de l'objet selected
