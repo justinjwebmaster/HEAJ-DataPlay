@@ -22,7 +22,8 @@ body{
     height: calc(100vh - ($border + 40px));
     background-color: $c-bg;
     background-image: url(../assets/images/grid_bg.svg);
-    background-size: cover;
+    background-size:cover;
+    // background-position: top 132px right 0px;
     line-height: 1.5;
     color:$c-text;
     margin: 0;
@@ -34,6 +35,7 @@ body{
 }
 
 nav {
+    position:relative;
     margin-left: 40px;
     margin-right:40px;
     margin-bottom: 56px;
@@ -41,6 +43,7 @@ nav {
     display: flex;
     justify-content: space-between;
     text-transform: uppercase;
+    z-index: 2;
 
     h1{
         font-size: 1.2rem;
@@ -149,6 +152,7 @@ nav {
     }
 }
 .icons{
+    z-index: -1;
     .icon{
         position:absolute;
         @keyframes float1 {
@@ -282,6 +286,9 @@ nav {
 
 .subtitle{
     margin-top:3%;
+    margin-left: 2%;
+    color: #00FAEB;
+    text-transform: uppercase;
 }
 
 
@@ -292,6 +299,7 @@ nav {
     font-size: 5.16rem;
     margin-bottom: 16px;
     text-transform: uppercase;
+    text-align: center;
 }
 
 .title{
@@ -306,10 +314,16 @@ nav {
     font-size: 1.44rem;
     margin-bottom: 24px;
     font-family: Work Sans;
+    text-align: center;
+    max-width: 1059px;
+}
+.text-big--solo{
+    padding-top: 50.01vh;
 }
 .text{
     margin-bottom: 24px;
     font-family: Work Sans;
+    max-width: 625px;
 }
 .text-little{
     font-size: 0.833rem;
@@ -324,9 +338,32 @@ nav {
     text-align: center;
 }
 
+/* text inteface */
+.text-i{
+    max-width: 550px;
+}
+
+/* sections landing */
+
+.section{
+    height: 100vh;
+    width: 100vw;
+}
+
+.section--1 .text-big span {
+    text-transform: uppercase;
+}
+
+.section--2, .section--6, .section--9{
+    display: flex;
+    justify-content: center;
+}
+
+
 
 .main__body{
     grid-area: 2 / 1 / 3 / 4;
+    transform: translateX(200px);
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -460,6 +497,7 @@ nav {
 }
 .main__stats {
     grid-area: 2 / 4 / 3 / 10;
+    transform: translateX(300px);
     border-radius: 10px;
     position:relative;
     .scrollbar--position{
@@ -473,7 +511,22 @@ nav {
             width: 22px;
         }
     }
-
+    .text__corps--parent{
+        margin-left: 20px;
+        margin-top: 20px;
+        .text__corps{
+            opacity: 1;
+            &:nth-child(1){
+                margin-bottom: 20px;
+            }
+            &:nth-child(2){
+                margin-bottom: 40px;
+            }
+            &:nth-child(3){
+                margin-bottom: 40px;
+            }
+        }
+    }
     .fond{
         width:100%;
         height: 100%;
@@ -501,7 +554,7 @@ nav {
             margin-left: 10px;
             width: 100%;
             flex-direction: column;
-            height: 1000px;
+            height: 1400px;
 
 
             .button{
@@ -530,7 +583,9 @@ nav {
 
             #container{
                 width: 100%;
-                height:100%;
+                height: 700px;
+                display: none;
+
             }
         }
     }
@@ -542,6 +597,19 @@ nav {
     }
 }
 
+@media (max-width: 600px) {
+    html {font-size: 85%;}
+    body{overflow-x: hidden;width:calc(100vw - 40 * 2)}
+    .corps__hm{width: 100%;}
+    .icon{display:none;}
+}
+
+@media (min-width: 601px, max-width: 1000px;){
+    html {font-size: 85%;}
+    body{overflow-x: hidden;width:calc(100vw - 40 * 2)}
+    .corps__hm{width: 100%;}
+    .icon{display:none;}
+}
 
 @media (max-width: 1000px){
     nav{
