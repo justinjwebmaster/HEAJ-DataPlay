@@ -2,6 +2,7 @@
   {
      "id":1,
      "objet":"Couverts",
+     "genre": "masculin",
      "url":"/assets/images/objets/1.webp",
      "position":{
         "p1":1,
@@ -25,6 +26,7 @@
   {
      "id":2,
      "objet":"Cure-dents",
+     "genre": "masculin",
      "url":"/assets/images/objets/2.webp",
      "position":{
         "p1":1,
@@ -45,6 +47,7 @@
   {
      "id":3,
      "objet":"Bougies",
+     "genre": "feminin",
      "url":"/assets/images/objets/3.webp",
      "position":{
         "p1":"",
@@ -61,7 +64,8 @@
   },
   {
      "id":4,
-     "objet":"Matériel d'art",
+     "objet":"Matériels d'art",
+     "genre": "masculin",
      "url":"/assets/images/objets/4.webp",
      "position":{
         "p1":"",
@@ -79,6 +83,7 @@
   {
      "id":5,
      "objet":"Statues et vases",
+     "genre": "masculin",
      "url":"/assets/images/objets/5.webp",
      "position":{
         "p1":"",
@@ -96,6 +101,7 @@
   {
      "id":6,
      "objet":"Batteries",
+     "genre": "feminin",
      "url":"/assets/images/objets/6.webp",
      "position":{
         "p1":"",
@@ -113,6 +119,7 @@
   {
      "id":7,
      "objet":"Savons",
+     "genre": "masculin",
      "url":"/assets/images/objets/7.webp",
      "position":{
         "p1":"",
@@ -130,6 +137,7 @@
   {
      "id":8,
      "objet":"Bouteilles",
+     "genre": "masculin",
      "url":"/assets/images/objets/8.webp",
      "position":{
         "p1":1,
@@ -147,6 +155,7 @@
   {
      "id":9,
      "objet":"Sextoys",
+     "genre": "masculin",
      "url":"/assets/images/objets/9.webp",
      "position":{
         "p1":"",
@@ -164,6 +173,7 @@
   {
      "id":10,
      "objet":"Bijoux",
+     "genre": "masculin",
      "url":"/assets/images/objets/10.webp",
      "position":{
         "p1":1,
@@ -181,6 +191,7 @@
   {
      "id":11,
      "objet":"Fournitures de bureau",
+     "genre": "feminin",
      "url":"/assets/images/objets/11.webp",
      "position":{
         "p1":3,
@@ -198,6 +209,7 @@
   {
      "id":12,
      "objet":"Clous / vis",
+     "genre": "masculin",
      "url":"/assets/images/objets/12.webp",
      "position":{
         "p1":6,
