@@ -308,6 +308,7 @@ nav {
     padding-top: 50.01vh;
 }
 .text{
+    font-size: 1rem;
     margin-bottom: 24px;
     font-family: Work Sans;
     max-width: 625px;
@@ -461,7 +462,7 @@ nav {
 .section--6{
     .title-little{
         padding-top: 160px;
-        padding-bottom: 80px;
+        padding-bottom: 24px;
         text-align: center;
     }
 }
@@ -879,6 +880,12 @@ footer{
     }
 }
 
+.section--8 .box-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
+}
 }
 
 @media (min-width: 601px) and (max-width: 1000px){
@@ -909,7 +916,13 @@ footer{
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
-        gap: -56px;
+        gap: 40px;
+        .box{
+            padding: 24px 32px;
+            h4{
+                margin-bottom: 8px;
+            }
+        }
     }
 
 /* animations section 1 */

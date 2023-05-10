@@ -350,7 +350,7 @@ function bubbleChart(){
                 value: 10
               },
               style: {
-                background: 'rgba(255,255,255,0.5)',
+                background: 'rgba(255,255,255,0.9)',
                 color: 'black',
                 textOutline: 'none',
                 fontWeight: 'normal',
@@ -505,7 +505,7 @@ function graphIndex(){
         tooltip: {
           useHTML: true,
           formatter: function() {
-            return this.series.name + '<b>' + this.point.name + ' :</b> ' + this.point.value;
+            return this.series.name + ' : ' + this.point.name + ' :<b> ' + this.point.value + '</b>';
           }
         },
         credits: {
