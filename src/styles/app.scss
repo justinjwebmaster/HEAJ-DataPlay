@@ -35,6 +35,7 @@ body{
 }
 
 nav {
+    position:relative;
     margin-left: 40px;
     margin-right:40px;
     margin-bottom: 56px;
@@ -42,6 +43,7 @@ nav {
     display: flex;
     justify-content: space-between;
     text-transform: uppercase;
+    z-index: 2;
 
     h1{
         font-size: 1.2rem;
@@ -150,6 +152,7 @@ nav {
     }
 }
 .icons{
+    z-index: -1;
     .icon{
         position:absolute;
         @keyframes float1 {
@@ -285,6 +288,7 @@ nav {
     margin-top:3%;
     margin-left: 2%;
     color: #00FAEB;
+    text-transform: uppercase;
 }
 
 
@@ -485,7 +489,6 @@ nav {
 }
 .container__corps{
     overflow: hidden;
-    max-width: 100%;
 }
 .main__stats {
     grid-area: 2 / 4 / 3 / 10;
@@ -503,7 +506,22 @@ nav {
             width: 22px;
         }
     }
-
+    .text__corps--parent{
+        margin-left: 20px;
+        margin-top: 20px;
+        .text__corps{
+            opacity: 1;
+            &:nth-child(1){
+                margin-bottom: 20px;
+            }
+            &:nth-child(2){
+                margin-bottom: 40px;
+            }
+            &:nth-child(3){
+                margin-bottom: 40px;
+            }
+        }
+    }
     .fond{
         width:100%;
         height: 100%;
@@ -561,6 +579,7 @@ nav {
             #container{
                 width: 100%;
                 height: 700px;
+                display: none;
 
             }
         }

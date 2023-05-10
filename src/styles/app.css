@@ -139,6 +139,7 @@ body {
 }
 
 nav {
+  position: relative;
   margin-left: 40px;
   margin-right: 40px;
   margin-bottom: 56px;
@@ -146,6 +147,7 @@ nav {
   display: flex;
   justify-content: space-between;
   text-transform: uppercase;
+  z-index: 2;
 }
 nav h1 {
   font-size: 1.2rem;
@@ -243,6 +245,9 @@ nav .menu--active {
   margin-bottom: 10px;
 }
 
+.icons {
+  z-index: -1;
+}
 .icons .icon {
   position: absolute;
 }
