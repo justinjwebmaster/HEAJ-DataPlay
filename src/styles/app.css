@@ -479,14 +479,6 @@ nav .menu--active {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-template-rows: 1fr;
   grid-auto-rows: min-content;
-  grid-column-gap: 20px;
-}
-.section--4 .title {
-  grid-column: 1/2;
-  margin-top: 20vh;
-}
-.section--4 .text {
-  grid-column: 2/3;
 }
 .section--4 a {
   width: 100%;
@@ -507,7 +499,7 @@ nav .menu--active {
   color: rgba(255, 255, 255, 0);
 }
 .section--4 a:hover {
-  background-color: rgba(27, 244, 231, 0.55);
+  background-color: rgba(233, 233, 233, 0.04);
 }
 .section--4 a:hover .section--4--link p {
   color: #DCFFFD;
