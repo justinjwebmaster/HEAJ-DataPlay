@@ -328,12 +328,16 @@ nav {
 }
 
 .section--1 {
-
+    justify-content: center;
+    align-items: center;
+    display:flex;
     height: calc(100vh - 132px);
     .home{
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+        padding-bottom:132px;
     }
     .text-big span{
         text-transform: uppercase;
