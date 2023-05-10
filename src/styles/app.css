@@ -375,6 +375,7 @@ nav .menu--active {
   font-size: 5.16rem;
   margin-bottom: 16px;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .title {
@@ -391,6 +392,12 @@ nav .menu--active {
   font-size: 1.44rem;
   margin-bottom: 24px;
   font-family: Work Sans;
+  text-align: center;
+  max-width: 1059px;
+}
+
+.text-big--solo {
+  padding-top: 50.01vh;
 }
 
 .text {
@@ -412,6 +419,21 @@ nav .menu--active {
 
 .text--center {
   text-align: center;
+}
+
+/* sections landing */
+.section {
+  height: 100vh;
+  width: 100vw;
+}
+
+.section--1 .text-big span {
+  text-transform: uppercase;
+}
+
+.section--2, .section--6, .section--9 {
+  display: flex;
+  justify-content: center;
 }
 
 .main__body {
