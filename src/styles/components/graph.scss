@@ -59,3 +59,7 @@
 .highcharts-tooltip-box .highcharts-label-box {
   fill: var(--highcharts-background-color-tooltip);
 }
+
+.highcharts-grid-line {
+  stroke: var(--highcharts-neutral-color-60);
+}
