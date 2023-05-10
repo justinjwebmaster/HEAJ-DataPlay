@@ -387,6 +387,17 @@ nav {
     grid-area: 2 / 4 / 3 / 10;
     border-radius: 10px;
     position:relative;
+    .scrollbar--position{
+        display: flex;
+        align-items: flex-end;
+
+        .scrollbar{
+            position: absolute;
+            right: 136px;
+            bottom: 123px;
+            width: 22px;
+        }
+    }
 
     .fond{
         width:100%;
@@ -408,6 +419,7 @@ nav {
         width:87%;
         overflow: auto;
         z-index: 1;
+
         .objectAndPos{
             margin-top: 2%;
             display: flex;
