@@ -107,6 +107,9 @@ nav {
             }
         }
     }
+    .menu--active{
+        border-bottom: 1px solid #DCFFFD;
+    }
 
 }
 
@@ -406,7 +409,9 @@ nav {
         }
     }
 }
-
+.container__corps{
+    overflow: hidden;
+}
 .main__stats {
     grid-area: 2 / 4 / 3 / 10;
     border-radius: 10px;
@@ -432,13 +437,14 @@ nav {
         width:87%;
         overflow: auto;
         z-index: 1;
-
         .objectAndPos{
             margin-top: 2%;
             display: flex;
             margin-left: 10px;
             width: 100%;
             flex-direction: column;
+            height: 1000px;
+
 
             .button{
                 margin-top: 10px;
@@ -469,5 +475,11 @@ nav {
                 height:100%;
             }
         }
+    }
+    .container::-webkit-scrollbar{
+        width: 12px;
+    }
+    .container::-webkit-scrollbar-track{
+        background-color: transparent;
     }
 }

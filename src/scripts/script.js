@@ -1,5 +1,4 @@
 'use strict';
-import { gsap } from "gsap";
 
 var position = ["p1", "p2", "p3", "p4", "p5", "p6", "p7", "p8", "p9", "p10"];
 var positionName = ["Bras", "Main", "Tête", "Tronc supérieur", "Parties intimes", "Jambes", "Pieds", "Oreilles", "Bouches", "Oeil"];
@@ -38,23 +37,6 @@ function changeArianePartTitle() {
   this.classList.add('active');
 }
 
-// modification du filAriane et title par l'objet sélectionné
-var buttonObject = document.querySelectorAll('.buttonsObject');
-
-buttonObject.forEach(function(button) {
-    button.addEventListener('click', changeArianeObjectTitle);
-    button.addEventListener('click', objectIn);
-});
-
-function changeArianeObjectTitle() {
-  var idObject = this.getAttribute('data-id');
-  console.log(idObject);
-  var objectSelected = objectName[idObject-1];
-
-  filAriane.textContent = objectSelected;
-  titleExplo.textContent = objectSelected;
-}
-
 // Affichage du nombre d'objet trouvé dans le top de l'explo en fonction de la partie selected
 // xx objets retrouvés
 function objectInPart(){
@@ -67,9 +49,9 @@ function objectInPart(){
       // console.log(json);
       //traitement
 
-      var datas = json; 
-      // fait la recherche de id: tot dans le json
-      var tot = datas.find(el => el.id == "tot");
+      // var datas = json; 
+      // // fait la recherche de id: tot dans le json
+      // var tot = datas.find(el => el.id == "tot");
 
       // récupere l'id de la partie cliqué
       var getPartId = this.getAttribute('data-id');
@@ -89,6 +71,24 @@ function objectInPart(){
         console.log('Error: (' + error +')');
     });
 }
+
+// modification du filAriane et title par l'objet sélectionné
+var buttonObject = document.querySelectorAll('.buttonsObject');
+
+buttonObject.forEach(function(button) {
+    button.addEventListener('click', changeArianeObjectTitle);
+    button.addEventListener('click', objectIn);
+});
+
+function changeArianeObjectTitle() {
+  var idObject = this.getAttribute('data-id');
+  console.log(idObject);
+  var objectSelected = objectName[idObject-1];
+
+  filAriane.textContent = objectSelected;
+}
+
+
 
 // Affichage du nombre d'{objet} identifié dans le top de l'explo en fonction de l'objet selected
 // xx {objets} identifiés
@@ -158,7 +158,7 @@ var detailCadreBD = document.getElementById("detail-brasd");
 var detailCadreB = document.getElementById("detail-bassin");
 var detailCadreJ = document.getElementById("detail-jambes");
 var detailCadreT = document.getElementById("detail-torse");
-
+if (svgCorps == true) {
 svgCorps.addEventListener("mousemove", function(event) {
 	var x = event.pageX;
 	var y = event.pageY;
@@ -226,7 +226,7 @@ svgCorps.addEventListener("mousemove", function(event) {
   }
 
 });
-
+}
 
 
 
