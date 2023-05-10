@@ -670,6 +670,13 @@ nav .menu--active {
   background-color: transparent;
 }
 
+footer {
+  margin-right: 40px;
+  margin-left: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
 @media (max-width: 600px) {
   html {
     font-size: 85%;
