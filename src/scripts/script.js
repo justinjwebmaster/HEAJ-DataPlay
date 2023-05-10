@@ -143,6 +143,20 @@ function objectIn(){
 
       titleExplo.textContent = totObject + " " + object + " identifiés";
 
+      // Etat actif
+      var active = document.querySelectorAll('.active');
+      active.forEach(function(active) {
+        active.classList.remove('active');
+      });
+
+      var bigObject = document.querySelectorAll('.bigObject');
+      bigObject.forEach(function(bigObject) {
+        if(bigObject.getAttribute('data-id') == objectId){
+          bigObject.classList.add('active');
+        }
+      });
+      this.classList.add('active');
+
     })
     .catch((error) => {
         console.log('Error: (' + error +')');

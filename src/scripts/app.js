@@ -94,7 +94,8 @@ function nbObjectIn(){
 
       const chart = Highcharts.chart(container, {
         chart: {
-          polar: true
+          polar: true,
+          height: '100%'
         },
         title: {
           text: ""
@@ -318,7 +319,8 @@ function bubbleChart(){
 
         chart: {
           type: 'packedbubble',
-          styledMode: true
+          styledMode: true,
+          height: '100%'
         },
         title: {
             text: ''
