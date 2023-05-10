@@ -123,7 +123,6 @@ button, .text_small {
 }
 
 body {
-  height: calc(100vh - 96px);
   background-color: #020E12;
   background-image: url(../assets/images/grid_bg.svg);
   background-size: cover;
@@ -135,6 +134,10 @@ body {
   margin-right: 40px;
   margin-top: 56px;
   margin-bottom: 40px;
+}
+
+.fullscreen {
+  height: calc(100vh - 96px);
 }
 
 nav {
@@ -453,7 +456,6 @@ nav .menu--active {
 
 .main__body {
   grid-area: 2/1/3/4;
-  transform: translateX(200px);
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -580,7 +582,6 @@ nav .menu--active {
 
 .main__stats {
   grid-area: 2/4/3/10;
-  transform: translateX(300px);
   border-radius: 10px;
   position: relative;
 }
@@ -638,6 +639,9 @@ nav .menu--active {
   flex-direction: column;
   height: 1400px;
 }
+.main__stats .container .objectAndPos .hidden {
+  display: none;
+}
 .main__stats .container .objectAndPos .button {
   margin-top: 10px;
   background-color: #020E12;
@@ -661,7 +665,6 @@ nav .menu--active {
 .main__stats .container .objectAndPos #container {
   width: 100%;
   height: 700px;
-  display: none;
 }
 .main__stats .container::-webkit-scrollbar {
   width: 12px;

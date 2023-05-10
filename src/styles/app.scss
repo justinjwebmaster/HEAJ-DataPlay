@@ -19,7 +19,6 @@ $border: 56px;
     }
 
 body{
-    height: calc(100vh - ($border + 40px));
     background-color: $c-bg;
     background-image: url(../assets/images/grid_bg.svg);
     background-size:cover;
@@ -32,6 +31,10 @@ body{
     margin-right:40px;
     margin-top: $border;
     margin-bottom: 40px;
+}
+
+.fullscreen{
+    height: calc(100vh - ($border + 40px));
 }
 
 nav {
