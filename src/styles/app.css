@@ -441,7 +441,7 @@ nav .menu--active {
   text-transform: uppercase;
 }
 
-.section--2, .section--6, .section--9 {
+.section--2, .section--9 {
   display: flex;
   justify-content: center;
 }
@@ -509,6 +509,19 @@ nav .menu--active {
 .section--4 a:hover .section--4--link p {
   color: #DCFFFD;
   text-decoration: underline;
+}
+
+.section--6 .title-little {
+  padding-top: 160px;
+  padding-bottom: 80px;
+  text-align: center;
+}
+.section--6 div {
+  height: 500px;
+}
+
+.section--10 {
+  height: calc(100vh - 70px);
 }
 
 .main__body {
