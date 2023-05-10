@@ -546,8 +546,15 @@ nav {
     }
 }
 
+@media (max-width: 600px) {
 
-@media (max-width: 999px){
+}
+
+@media (min-width: 601px, max witth: 1000px;){
+
+}
+
+@media (max-width: 1000px){
     nav{
         display:block;
         .nav__links{
@@ -589,7 +596,7 @@ nav {
     }
 }
 
-@media (min-width:1000px){
+@media (min-width:1001px){
     .warning{
         display:none;
     }
