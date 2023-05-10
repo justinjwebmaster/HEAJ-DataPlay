@@ -468,6 +468,7 @@ nav {
         gap: 73px;
         .box{
             padding: 32px 40px;
+            background-color: rgba(233, 233, 233, 0.04);
 
             h4{
                 font-size: 1.44rem;
@@ -907,13 +908,26 @@ footer{
         width: 100%;
     }
 
-    /* section 2 landing */
+    /* sections  landing */
 
     .section--2, .section--9{
         .text-big{
             max-width: 80%;
         }
     }
+
+    .section--3 .text, .section--7 .text, .section--10 .text {
+        grid-column: 2/9;
+    }
+
+    .section--8 .box-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: -56px;
+
+
+/* animations section 1 */
 
     @keyframes float1 {
         0% {
@@ -999,6 +1013,6 @@ footer{
 
 @media (min-width:1001px){
     .warning{
-        display:none;
+        display: none;
     }
 }
