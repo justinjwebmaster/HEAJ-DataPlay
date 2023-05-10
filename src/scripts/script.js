@@ -93,7 +93,6 @@ function changeArianeObjectTitle() {
 
   filAriane.textContent = objectSelected;
 
-
   textCorpsParent.classList.add('hidden');
   statContainer.classList.remove('hidden');
 }
