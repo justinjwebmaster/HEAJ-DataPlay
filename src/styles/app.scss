@@ -450,9 +450,35 @@ nav {
         text-align: center;
     }
 }
+
+.section--8{
+    .title{
+        text-align: center;
+    }
+    .box-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 73px;
+        .box{
+            padding: 32px 40px;
+
+            h4{
+                font-size: 1.44rem;
+                margin-bottom: 24px;
+            }
+        }
+    }
+}
+
 .section--10{
     height: calc(100vh - 70px);
 }
+
+
+
+
+
 
 
 .main__body{
