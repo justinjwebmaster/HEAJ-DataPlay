@@ -622,11 +622,18 @@ nav .menu--active {
   background-color: transparent;
 }
 
-/* @media (max-width: 600px) {
-
+@media (max-width: 600px) {
+  html {
+    font-size: 85%;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  .corps__hm {
+    width: 100%;
+  }
 }
-
-@media (min-width: 601px, max witth: 1000px;){
+/*@media (min-width: 601px, max witth: 1000px;){
 
 } */
 @media (max-width: 1000px) {
