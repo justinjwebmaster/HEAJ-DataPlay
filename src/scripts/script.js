@@ -23,6 +23,7 @@ buttonPart.forEach(function(button) {
 });
 
 function changeArianePartTitle() {
+
   var idPart = this.getAttribute('data-id');
   console.log(idPart);
   var partSelected = positionName[idPart-1];
@@ -36,6 +37,7 @@ function changeArianePartTitle() {
   });
 
   this.classList.add('active');
+
 }
 
 // Affichage du nombre d'objet trouvé dans le top de l'explo en fonction de la partie selected
