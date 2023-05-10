@@ -22,7 +22,7 @@
     <script src="scripts/app.js" defer></script>
     <script src="scripts/script.js" defer></script>
 </head>
-<body class="container__corps">
+<body class="container__corps fullscreen">
     <section class="parent">
         <nav>
             <h1 class="navtext links__el--active"><a href="index.html">The Uninvited</a></h1>
@@ -103,7 +103,23 @@
                         <p class="text__corps text-i">Sur THE UNINVITED, la curiosité n'est pas un vilain défaut.</p>
                         <p class="text__corps text-i">Cliquez sur une partie du corps pour l’analyser.</p>
                     </div>
-                    <div id="container"></div>
+                    <div class="stats__container hidden">
+                        <div id="container"></div>
+
+                        
+                    
+                        <div class="statPart">
+                            <div class="statA">
+                              <div class="statA__value"></div>
+                              <div class="statA__phrase">des objets retrouvé dans <span class="statA__part"></span> sont des <span class="statA__object"></span></div>
+                            </div>
+                            <div class="statB">
+                              <div class="statB__value"></div>
+                              <div class="statB__phrase">de tout les objest sont retrouvé dans <span class="statB__part"></span></div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>

@@ -12,6 +12,8 @@ var datasetExplo = '/assets/datas/datasetExplo.json';
 // déclaration variables
 var filAriane = document.querySelector('.filAriane');
 var titleExplo = document.querySelector('.titleExplo');
+var textCorpsParent = document.querySelector('.text__corps--parent');
+var statContainer = document.querySelector('.stats__container');
 
 
 // modification du filAriane et title par la partie du corps sélectionnée
@@ -23,6 +25,7 @@ buttonPart.forEach(function(button) {
 });
 
 function changeArianePartTitle() {
+
   var idPart = this.getAttribute('data-id');
   console.log(idPart);
   var partSelected = positionName[idPart-1];
@@ -36,6 +39,8 @@ function changeArianePartTitle() {
   });
 
   this.classList.add('active');
+  textCorpsParent.classList.add('hidden');
+  statContainer.classList.remove('hidden');
 }
 
 // Affichage du nombre d'objet trouvé dans le top de l'explo en fonction de la partie selected
@@ -87,6 +92,10 @@ function changeArianeObjectTitle() {
   var objectSelected = objectName[idObject-1];
 
   filAriane.textContent = objectSelected;
+
+
+  textCorpsParent.classList.add('hidden');
+  statContainer.classList.remove('hidden');
 }
 
 // Affichage du nombre d'{objet} identifié dans le top de l'explo en fonction de l'objet selected
