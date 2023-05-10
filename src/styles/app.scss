@@ -4,11 +4,6 @@
 
 $border: 56px;
 
-@font-face {
-    font-family: GoshaSans;
-    src: url(../assets/PPGoshaSans-Regular.otf);
-}
-
 *{
     margin:0;
     padding:0;
@@ -127,26 +122,26 @@ nav {
 .icons{
     .icon{
         position:absolute;
-          @keyframes float1 {
+        @keyframes float1 {
             0% {
-              transform: translate(0, 0) rotate(0) scale(1);
+                transform: translate(0, 0) rotate(0) scale(1);
             }
             50% {
-              transform: translate(50px, 50px) rotate(180deg) scale(0.5);
+                transform: translate(50px, 50px) rotate(180deg) scale(0.5);
             }
             100% {
-              transform: translate(0, 0) rotate(360deg) scale(1);
+                transform: translate(0, 0) rotate(360deg) scale(1);
             }
-          }
-          @keyframes float2 {
+        }
+        @keyframes float2 {
             0% {
-              transform: translate(0, 0) rotate(0) scale(1);
+                transform: translate(0, 0) rotate(0) scale(1);
             }
             50% {
-              transform: translate(-50px, -50px) rotate(180deg) scale(2);
+                transform: translate(-50px, -50px) rotate(180deg) scale(2);
             }
             100% {
-              transform: translate(0, 0) rotate(360deg) scale(1);
+                transform: translate(0, 0) rotate(360deg) scale(1);
             }
         }
         &:nth-child(1){
@@ -337,6 +332,7 @@ nav {
         svg{
             display:none;
             margin:auto;
+            height:100%;
 
             &.active{
                 display:flex;
@@ -345,27 +341,42 @@ nav {
     }
 
     .main__selection{
-        .button{
-            width:80px;
-            height:80px;
-            background-color: #020E12;
-            border:none;
-            text-align: center;
-            text-decoration: none;
-            &:hover{
-                cursor: pointer;
-                fill: #00FAEB;
-                fill-opacity: 1;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
 
-                path{
+        .selection__separation{
+            display:flex;
+            margin-bottom:10px;
+            .button{
+                width:100%;
+                height:100%;
+                max-width: 80px;
+                max-height: 80px;
+                min-width: 40px;
+                min-height: 40px;
+                border:none;
+                text-align: center;
+                text-decoration: none;
+                &:not(:last-of-type){
+                    margin-right: 10px;
+                }
+                &:hover{
+                    cursor: pointer;
                     fill: #00FAEB;
                     fill-opacity: 1;
+
+                    path{
+                        fill: #00FAEB;
+                        fill-opacity: 1;
+                    }
                 }
             }
-        }
-        .active, .active path{
-            fill: #00FAEB;
-            fill-opacity: 1;
+            .active, .active path{
+                fill: #00FAEB;
+                fill-opacity: 1;
+            }
         }
     }
 }
