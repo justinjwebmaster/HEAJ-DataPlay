@@ -359,6 +359,23 @@ nav {
         grid-column: 2/6;
     }
 }
+.section--5{
+    display: grid;
+    grid-template-columns: repeat(9, minmax(0, 1fr));
+    grid-auto-rows: min-content;
+    grid-column-gap: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    
+    .blabla{
+        grid-column: 1/6;
+    }
+    .heatmap{
+        grid-column: 6/9;
+    }
+
+}
+
 .section--9{
     .div9{
         .text-big{
@@ -427,9 +444,6 @@ nav {
         padding-top: 160px;
         padding-bottom: 80px;
         text-align: center;
-    }
-    div{
-        height: 500px;
     }
 }
 .section--10{
