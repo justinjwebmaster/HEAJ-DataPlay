@@ -434,7 +434,7 @@ function addStory(){
       // console.log(json);
       //traitement
 
-      var storyContainer = document.querySelector('.story__container');
+      var storyContainer = document.querySelector('.funFact__text');
 
       var idObject = this.getAttribute('data-id');
       console.log("story : id objet " +idObject);
@@ -443,9 +443,11 @@ function addStory(){
       var item = json.find(el => el.id == idObject);
       console.log(item);
 
-      var stories = item.stories;
-      console.log("les storys "+stories);
+      var story = item.story;
+      console.log("les storys "+story);
 
+      // ajout de la story dans la page
+      storyContainer.textContent = story;
     })
 }
 
