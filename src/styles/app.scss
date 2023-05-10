@@ -399,7 +399,11 @@ nav {
                 cursor: pointer;
                 color: $c-text;
                 border: 1px solid $c-alt;
-                background-color: rgba(0, 250, 233, 0.05);
+                background-color: rgba(233, 233, 233, 0.04);
+
+                &:hover {
+                    background-color: rgba(0, 250, 233, 0.07);
+                }
             }
         }
     }
