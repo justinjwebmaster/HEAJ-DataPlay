@@ -382,6 +382,7 @@ nav .menu--active {
   font-size: 5.16rem;
   margin-bottom: 16px;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .title {
@@ -398,11 +399,18 @@ nav .menu--active {
   font-size: 1.44rem;
   margin-bottom: 24px;
   font-family: Work Sans;
+  text-align: center;
+  max-width: 1059px;
+}
+
+.text-big--solo {
+  padding-top: 50.01vh;
 }
 
 .text {
   margin-bottom: 24px;
   font-family: Work Sans;
+  max-width: 625px;
 }
 
 .text-little {
@@ -421,8 +429,24 @@ nav .menu--active {
   text-align: center;
 }
 
+/* sections landing */
+.section {
+  height: 100vh;
+  width: 100vw;
+}
+
+.section--1 .text-big span {
+  text-transform: uppercase;
+}
+
+.section--2, .section--6, .section--9 {
+  display: flex;
+  justify-content: center;
+}
+
 .main__body {
   grid-area: 2/1/3/4;
+  transform: translateX(200px);
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -545,10 +569,12 @@ nav .menu--active {
 
 .container__corps {
   overflow: hidden;
+  max-width: 100%;
 }
 
 .main__stats {
   grid-area: 2/4/3/10;
+  transform: translateX(300px);
   border-radius: 10px;
   position: relative;
 }
