@@ -6,6 +6,7 @@ var positionName = ["Bras", "Main", "Tête", "Tronc supérieur", "Parties intime
 
 var positionNameDet = ["le bras", "la main", "la tête", "le tronc supérieur", "les parties intimes", "la jambes", "les pieds", "les oreilles", "la bouches", "l'oeil"];
 
+var totalOfAllObject = 3462;
 
 var dataset = '/assets/datas/dataset.json';
 var datasetExplo = '/assets/datas/datasetExplo.json';
