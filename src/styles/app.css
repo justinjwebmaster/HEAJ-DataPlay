@@ -463,11 +463,14 @@ nav .menu--active {
   grid-column-gap: 20px;
 }
 .section--4 .title {
-  grid-column: 2/6;
+  grid-column: 1/2;
   margin-top: 20vh;
 }
 .section--4 .text {
   grid-column: 2/6;
+}
+.section--4 h4 {
+  text-align: center;
 }
 .section--4 > * {
   justify-self: center;
