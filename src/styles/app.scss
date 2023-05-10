@@ -861,6 +861,18 @@ footer{
     margin-left:40px;
     display:flex;
     justify-content: space-between;
+
+    .footerLink{
+        color: $c-text;
+        text-decoration: none;
+
+        &:hover, &:focus{
+            color: $c-alt;
+        }
+    }
+    .figmaLink{
+        margin-right: 30px;
+    }
 }
 
 @media (max-width: 600px) {
