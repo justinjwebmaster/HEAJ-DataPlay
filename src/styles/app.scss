@@ -483,3 +483,42 @@ nav {
         background-color: transparent;
     }
 }
+
+
+@media (max-width: 1000px){
+    nav{
+        display:block;
+        .nav__links{
+            display:none;
+        }
+    }
+
+    .main__body{
+        display:none;
+    }
+
+    .main__stats{
+        display:none;
+    }
+
+    .warning{
+        grid-area: 2 / 1 / 2 / 10;
+        text-align: center;
+
+        a{
+            // TODO: add link styling here
+            color: $c-text;
+            text-decoration: none;
+
+            &:hover{
+                color: $c-alt;
+            }
+        }
+    }
+}
+
+@media (min-width:1001px){
+    .warning{
+        display:none;
+    }
+}
