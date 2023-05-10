@@ -2,6 +2,7 @@
 
 var position = ["p1", "p2", "p3", "p4", "p5", "p6", "p7", "p8", "p9", "p10"];
 var positionName = ["Bras", "Main", "Tête", "Tronc supérieur", "Parties intimes", "Jambes", "Pieds", "Oreilles", "Bouches", "Oeil"];
+var positionName = ["Bras", "Main", "Tête", "Tronc supérieur", "Parties intimes", "Jambes", "Pieds", "Oreilles", "Bouches", "Oeil"];
 var objectName = ["Couvert", "Cure-dents", "Bougies", "Matériel d'art", "Statues et vases", "Batteries", "Savons", "Bouteilles", "Sextoys", "Bijoux", "Fournitures de bureau", "Clous - Vis"];
 var totalObject = [{id: "p1", value:13},{id: "p2", value:649},{id: "p3", value:729},{id: "p4", value:28},{id: "p5", value:207},{id: "p6", value:30},{id: "p7", value:134},{id: "p8", value:1549},{id: "p9", value:83},{id: "p10", value:40}];
 
@@ -88,8 +89,6 @@ function changeArianeObjectTitle() {
   filAriane.textContent = objectSelected;
 }
 
-
-
 // Affichage du nombre d'{objet} identifié dans le top de l'explo en fonction de l'objet selected
 // xx {objets} identifiés
 function objectIn(){
@@ -108,16 +107,15 @@ function objectIn(){
       var objectId = this.getAttribute('data-id');
 
       // fait la recherche de id: tot dans le json
-      var object = datas.find(el => el.id == objectId);
+      var objectJson = datas.find(el => el.id == objectId);
 
-      var object = object.objet;
-      var positions = object.position;
+      var object = objectJson.objet;
+      var positions = objectJson.position;
       console.log("test objet : "+object);
       console.log("test position : "+positions);
 
       var positionTable = [];
       var positionNameTable = [];
-      console.log(positionTable);
 
       for (const key in positions) {
         // if (Object.hasOwnProperty.call(positions, key)) {
@@ -136,12 +134,24 @@ function objectIn(){
         
       }
       console.log("Hoho : "+positionTable);
+      var totObject = 0;
+      positionTable.forEach(element => {
+        console.log(element)
+        totObject += element;
+      });
+      console.log("totObject : "+totObject);
+
+      titleExplo.textContent = totObject + " " + object + " identifiés";
 
     })
     .catch((error) => {
         console.log('Error: (' + error +')');
     });
 }
+
+
+
+
 // heatmap
 var svgCorps = document.querySelector(".corps__hm");
 
