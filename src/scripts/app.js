@@ -24,7 +24,8 @@ var buttonsBulles = document.querySelectorAll('.buttonsBulles');
 
 
 buttonsObject.forEach(button => {
-  button.addEventListener('click', nbObjectIn)
+  button.addEventListener('click', nbObjectIn);
+  button.addEventListener('click', addStory)
 });
 
 buttonsPart.forEach(button => {
@@ -372,6 +373,35 @@ function bubbleChart(){
     .catch((error) => {
         console.log('Error: (' + error +')');
     });
+}
+
+// ajout des story dans la page objet
+function addStory(){
+  fetch(datasetExplo)
+    .then((response) => {
+      return response.json();
+    })
+    .then((json) => {
+      // console.log(json);
+      //traitement
+
+      var idObject = this.getAttribute('data-id');
+      console.log("story : id objet " +idObject);
+
+      // fait la recherche de l'objet xx dans le json
+      var item = json.find(el => el.id == idObject);
+      console.log(item);
+
+      var stories = item.stories;
+      console.log("les storys "+stories);
+
+      stories.forEach(story => {
+        if (story != "") {
+          console.log("story : "+story.story);
+        }
+      });
+
+    })
 }
 
 
