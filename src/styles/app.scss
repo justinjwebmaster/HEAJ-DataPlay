@@ -391,14 +391,6 @@ nav {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-template-rows: 1fr;
     grid-auto-rows: min-content;
-    grid-column-gap: 20px;
-    .title{
-        grid-column: 1/2;
-        margin-top: 20vh;
-    }
-    .text{
-        grid-column: 2/3;
-    }
 
     a{
         width:100%;
@@ -408,7 +400,6 @@ nav {
         display:flex;
         align-items: center;
         justify-content: center;
-        border: 2px solid $c-alt;
 
         div{
             display:flex;
@@ -422,6 +413,8 @@ nav {
         }
 
         &:hover{
+            background-color:rgb(233, 233, 233,.04);
+
             .section--4--link p{
                 color: $c-text;
                 text-decoration:underline;
