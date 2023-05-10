@@ -401,6 +401,11 @@ nav {
                         fill-opacity: 1;
                     }
                 }
+
+                .active, .active path{
+                    fill: #00FAEB;
+                    fill-opacity: 1;
+                }
             }
             .active, .active path{
                 fill: #00FAEB;
