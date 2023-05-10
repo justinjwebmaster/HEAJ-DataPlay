@@ -720,13 +720,7 @@ nav {
                     margin-bottom: 10px;
                 }
             }
-
-            
-
-            
-                
-            
-            
+ 
         }
     }
     .container::-webkit-scrollbar{
@@ -860,10 +854,29 @@ footer{
 }
 
 @media (min-width: 601px) and (max-width: 1000px){
-    html {font-size: 85%;}
-    body{overflow-x: hidden;width:calc(100vw - 80px)}
-    .corps__hm{width: 100%;}
-    .icon{display:none;}
+    html {
+        font-size: 85%;
+    }
+    body{
+        overflow-x: hidden; 
+        width:calc(100vw - 80px)
+    }
+    .corps__hm{
+        width: 100%;
+    }
+    .icon{
+        display:none;
+    }
+
+    /* section 2 landing */
+
+    .section--2, .section--9{
+        .text-big{
+            max-width: 80%;
+        }
+    }
+
+
 }
 
 @media (max-width: 1000px){
