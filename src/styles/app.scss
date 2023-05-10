@@ -371,8 +371,9 @@ nav {
     margin-left: 40px;
     margin-right: 40px;
     
-    .blabla{
+    .text-heatmap{
         grid-column: 1/6;
+        align-self: center;
     }
     .heatmap{
         grid-column: 6/9;
