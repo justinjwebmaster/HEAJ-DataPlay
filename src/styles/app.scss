@@ -126,7 +126,7 @@ nav {
     background-size: cover;
 }
 .fond__corps{
-    background-image: url(../assets/images/corps_hm.svg);
+    background-image: url(../assets/images/corps.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -762,6 +762,7 @@ nav {
         display: flex;
         justify-content: space-around;
         margin-top: 75px;
+        margin-bottom: 100px;
     }
     .statA{
         background-color:rgba(0, 250, 233, 0.06);
