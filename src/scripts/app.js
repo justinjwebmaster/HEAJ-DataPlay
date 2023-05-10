@@ -97,7 +97,7 @@ function nbObjectIn(){
           polar: true
         },
         title: {
-          text: "Nombre de fois que " + objet + " a été trouvé dans..."
+          text: ""
         },
         xAxis: {
           crosshair: true,
@@ -321,7 +321,7 @@ function bubbleChart(){
           styledMode: true
         },
         title: {
-            text: 'Objets dans ' + namePartDet
+            text: ''
         },
         plotOptions: {
           packedbubble: {
@@ -371,3 +371,72 @@ function bubbleChart(){
         console.log('Error: (' + error +')');
     });
 }
+
+
+
+function graphIndex(){
+  fetch(dataset)
+    .then((response) => {
+      return response.json();
+    })
+    .then((json) => {
+      let datas = {
+        "series": []
+      };
+
+      for(let pIndex = 1; pIndex <= 24; pIndex++){
+        let entry = {};
+
+        var namePart = positionName[pIndex-1]
+
+        entry.name = namePart;
+        entry.data = [];
+
+        for(let jsonData of json){
+          if(jsonData.position["p"+pIndex] > 0 && jsonData.id != "tot"){
+            entry.data.push({
+              name: jsonData.objet,
+              value: Number(jsonData.position["p"+pIndex])
+            });
+          }
+        }
+        datas.series.push(entry);
+      }
+      console.log(datas);
+
+      Highcharts.chart('container', {
+
+        chart: {
+          type: 'packedbubble',
+          styledMode: true
+        },
+        title: {
+            text: ''
+        },
+        plotOptions: {
+          packedbubble: {
+            layoutAlgorithm: {
+              gravitationalConstant: 0.02,
+            },
+          }
+        },
+        tooltip: {
+          useHTML: true,
+          formatter: function() {
+            return this.series.name + '<b>' + this.point.name + ' :</b> ' + this.point.value;
+          }
+        },
+        credits: {
+          enabled: false
+        },
+        exporting: {
+          enabled: false
+        },
+        legend:{ enabled:false },
+
+        series: datas.series
+    });
+
+    });
+}
+graphIndex();

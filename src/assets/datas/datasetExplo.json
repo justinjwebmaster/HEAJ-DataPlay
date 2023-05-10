@@ -14,7 +14,13 @@
         "p8":1,
         "p9":"",
         "p10":2
-     }
+     },
+     "story":{
+         "s1": "Un homme bien connu de l'ED âgé de 34 ans avait des antécédents d'ingestion et de placement de corps étrangers dans son urètre. Après avoir reçu de mauvaises nouvelles, il a inséré le manche d'une cuillère en plastique dans son urètre à la prison, et a également ressenti un corps étranger coincé dans sa gorge. Un objet en forme de brosse à dents a également été trouvé dans son estomac.",
+         "s2": "Un homme de 34 ans a inséré le manche d'une fourchette en plastique dans son pénis en prison.",
+         "s3": "Un homme de 35 ans a déclaré avoir ingéré 13 brosses à dents et avoir également introduit le manche d'une cuillère dans son urètre deux heures avant son arrivée à la prison. Le diagnostic a révélé la présence d'un corps étranger dans son urètre ainsi qu'un corps étranger avalé.",
+         "s4": "Un homme de 44 ans n'avait plus de cathéters et devait se cathétériser pour uriner. Il a alors pris une cuillère en plastique, en a cassé le manche et l'a insérée dans son urètre, ne pouvant plus la retirer par la suite."
+      }
   },
   {
      "id":2,
