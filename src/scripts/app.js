@@ -10,8 +10,8 @@ var positionNameDet = ["le bras", "la main", "la tête", "le tronc supérieur", 
 
 var totalOfAllObject = 3462;
 
-var dataset = '/assets/datas/dataset.json';
-var datasetExplo = '/assets/datas/datasetExplo.json';
+var dataset = 'assets/datas/dataset.json';
+var datasetExplo = 'assets/datas/datasetExplo.json';
 
 //var Highcharts = require('highcharts');
 // Load module after Highcharts is loaded

@@ -6,8 +6,8 @@ var positionName = ["Bras", "Main", "Tête", "Tronc supérieur", "Parties intime
 var objectName = ["Couvert", "Cure-dents", "Bougies", "Matériel d'art", "Statues et vases", "Batteries", "Savons", "Bouteilles", "Sextoys", "Bijoux", "Fournitures de bureau", "Clous - Vis"];
 var totalObject = [{id: "p1", value:13},{id: "p2", value:649},{id: "p3", value:729},{id: "p4", value:28},{id: "p5", value:207},{id: "p6", value:30},{id: "p7", value:134},{id: "p8", value:1549},{id: "p9", value:83},{id: "p10", value:40}];
 
-var dataset = '/assets/datas/dataset.json';
-var datasetExplo = '/assets/datas/datasetExplo.json';
+var dataset = 'assets/datas/dataset.json';
+var datasetExplo = 'assets/datas/datasetExplo.json';
 
 // déclaration variables
 var filAriane = document.querySelector('.filAriane');
