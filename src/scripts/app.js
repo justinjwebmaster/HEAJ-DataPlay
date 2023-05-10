@@ -97,7 +97,7 @@ function nbObjectIn(){
           polar: true
         },
         title: {
-          text: "Nombre de fois que " + objet + " a été trouvé dans..."
+          text: ""
         },
         xAxis: {
           crosshair: true,
@@ -321,7 +321,7 @@ function bubbleChart(){
           styledMode: true
         },
         title: {
-            text: 'Objets dans ' + namePartDet
+            text: ''
         },
         plotOptions: {
           packedbubble: {
