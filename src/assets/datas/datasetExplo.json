@@ -16,12 +16,7 @@
         "p9":"",
         "p10":2
      },
-     "stories":[
-         {"story": "Un homme bien connu de l'ED âgé de 34 ans avait des antécédents d'ingestion et de placement de corps étrangers dans son urètre. Après avoir reçu de mauvaises nouvelles, il a inséré le manche d'une cuillère en plastique dans son urètre à la prison, et a également ressenti un corps étranger coincé dans sa gorge. Un objet en forme de brosse à dents a également été trouvé dans son estomac"},
-         {"story": "Un homme de 34 ans a inséré le manche d'une fourchette en plastique dans son pénis en prison."},
-         {"story": "Un homme de 35 ans a déclaré avoir ingéré 13 brosses à dents et avoir également introduit le manche d'une cuillère dans son urètre deux heures avant son arrivée à la prison. Le diagnostic a révélé la présence d'un corps étranger dans son urètre ainsi qu'un corps étranger avalé."},
-         {"story": "Un homme de 44 ans n'avait plus de cathéters et devait se cathétériser pour uriner. Il a alors pris une cuillère en plastique, en a cassé le manche et l'a insérée dans son urètre, ne pouvant plus la retirer par la suite."}
-     ]
+     "story": "Un homme de 44 ans n'avait plus de cathéters et devait se cathétériser pour uriner. Il a alors pris une cuillère en plastique, en a cassé le manche et l'a insérée dans son urètre, ne pouvant plus la retirer par la suite."
   },
   {
      "id":2,
@@ -40,9 +35,7 @@
         "p9":"",
         "p10":""
      },
-     "stories":[
-      {"story": ""}
-     ]
+     "story": "Un garçon de 4 ans a inséré un grain de pop-corn dans son oreille. Sa mère a essayé de le retirer avec un cure-dent et a ensuite tenté de l'aspirer avec un aspirateur. Il a été diagnostiqué avec un corps étranger dans l'oreille et une perforation du tympan."
   },
   {
      "id":3,
@@ -60,7 +53,8 @@
         "p8":2,
         "p9":"",
         "p10":""
-     }
+     },
+     "story": "Un patient âgé de 64 ans est arrivé à l'hôpital avec un corps étranger dans le rectum. Il avait eu des rapports sexuels avec sa petite amie qui avait introduit une bougie dans son rectum, mais n'avait pas pu la retirer. Le patient avait des difficultés à aller à la selle."
   },
   {
      "id":4,
@@ -78,7 +72,8 @@
         "p8":14,
         "p9":"",
         "p10":8
-     }
+     }, 
+     "story": "Un jeune homme de 14 ans a introduit de l'argile violette dans ses oreilles pour essayer de soulager une douleur récente, mais n'a pas réussi à l'enlever."
   },
   {
      "id":5,
@@ -96,7 +91,8 @@
         "p8":"",
         "p9":"",
         "p10":1
-     }
+     },
+     "story": "Un homme de 40 ans a déclaré avoir introduit un morceau d'ornement en verre dans son rectum."
   },
   {
      "id":6,
@@ -114,7 +110,8 @@
         "p8":6,
         "p9":"",
         "p10":""
-     }
+     }, 
+     "story": "Une femme de 25 ans a une pile AA dans son vagin depuis environ deux semaines, mais pensait qu'elle sortirait d'elle-même."
   },
   {
      "id":7,
@@ -132,7 +129,8 @@
         "p8":5,
         "p9":"",
         "p10":8
-     }
+     }, 
+     "story": "Un homme de 42 ans a mal à l'oreille depuis une semaine. Il dit avoir mis de l'eau et du savon dans l'oreille et qu'elle s'est vidée. Son ami a regardé dans son oreille et a senti que quelque chose bougeait, le patient s'est donc inquiété."
   },
   {
      "id":8,
@@ -150,7 +148,8 @@
         "p8":"",
         "p9":4,
         "p10":9
-     }
+     }, 
+     "story": "Un homme de 61 ans a placé la partie supérieure coupée d'une bouteille en plastique sur son pénis à minuit, mais n'a pas pu l'enlever et a essayé de la brûler. Le diagnostic était un corps étranger superficiel sur le pénis et une brûlure du pénis."
   },
   {
      "id":9,
@@ -168,7 +167,8 @@
         "p8":"",
         "p9":"",
         "p10":""
-     }
+     }, 
+     "story": "Une femme de 60 ans est venue à l'hôpital avec un corps étranger rectal possible, qui s'est avéré être un vibromasseur cylindrique de la taille d'un tampon, relié à une ficelle qui s'est rompue lorsqu'elle a essayé de le retirer."
   },
   {
      "id":10,
@@ -186,7 +186,8 @@
         "p8":1349,
         "p9":73,
         "p10":3
-     }
+     }, 
+     "story": "À l'âge de 26 ans, une femme a inséré un bracelet dans son vagin lors de son arrestation pour se protéger contre une agression sexuelle."
   },
   {
      "id":11,
@@ -204,7 +205,8 @@
         "p8":167,
         "p9":5,
         "p10":4
-     }
+     }, 
+      "story": "Une femme de 24 ans a inséré un stylo dans son vagin pour se masturber, mais n'a pas pu le retirer."
   },
   {
      "id":12,
@@ -222,7 +224,8 @@
         "p8":3,
         "p9":1,
         "p10":5
-     }
+     }, 
+     "story": "Un homme de 16 ans a introduit une vis dans son rectum par curiosité et ne peut plus la retirer."
   },
   {
      "id":"tot",
