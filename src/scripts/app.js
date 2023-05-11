@@ -106,12 +106,22 @@ function nbObjectIn(){
         },
         xAxis: {
           crosshair: true,
-          categories: axisLabel // Utiliser les catégories récupérées depuis le fichier JSON
+          categories: axisLabel, // Utiliser les catégories récupérées depuis le fichier JSON
+          labels: {
+            style: {
+              color: '#DCFFFD'
+            }
+          }
         },
         yAxis: {
           crosshair: true,
           title: {
             text: "Quantité"
+          },
+          labels: {
+            style: {
+              color: '#DCFFFD'
+            }
           }
         },
         tooltip: {
