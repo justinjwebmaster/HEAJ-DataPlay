@@ -381,8 +381,8 @@ nav {
     grid-column-gap: 20px;
     margin-left: 0px;
     margin-right: 40px;
-    margin-top: 20px;
-    
+    margin-top: 40px;
+
     .text-heatmap{
         grid-column: 1/6;
         align-self: center;
@@ -652,7 +652,7 @@ nav {
             }
         }
     }
-    
+
     .fond{
         width:100%;
         height: 100%;
@@ -684,7 +684,7 @@ nav {
             .hidden{
                 display: none;
             }
-            
+
             .button{
                 margin-top: 10px;
                 background-color: $c-bg;
@@ -729,14 +729,14 @@ nav {
                     color: $c-alt;
                     margin-bottom: 10px;
                 }
-    
+
                 .funFact__text{
                     font-size: 1rem;
                     font-weight: 400;
                     margin-bottom: 10px;
                 }
             }
- 
+
         }
     }
     .container::-webkit-scrollbar{
@@ -751,7 +751,7 @@ nav {
         .scrollbar--position{
             display: flex;
             align-items: flex-end;
-    
+
             .scrollbar{
                 position: absolute;
                 right: 10px;
@@ -907,7 +907,7 @@ footer{
         font-size: 85%;
     }
     body{
-        overflow-x: hidden; 
+        overflow-x: hidden;
         width:calc(100vw - 80px)
     }
     .corps__hm{
@@ -1039,5 +1039,5 @@ footer{
             transform: scale(0.6);
         }
     }
-    
+
 }
